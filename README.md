@@ -77,8 +77,27 @@ holds plants someone actually stamped.
 
 DigitalOcean Kubernetes (`sfo2`), same cluster as `dnd-dashboard`. Push to
 `main` runs `.github/workflows/deploy.yml`: vet and test, build and push
-`syntaf/mojave-specimen-review:<sha>` to Docker Hub, then
+`registry.digitalocean.com/mbolt/mojave-specimen-review:<sha>`, then
 `helm upgrade --install --atomic -n dnd`.
+
+### Registry
+
+This uses a **DigitalOcean Container Registry** (`mbolt`, sfo3, Starter tier —
+free, one repository, 500 MB) rather than Docker Hub, which is where
+`dnd-dashboard` publishes. Two reasons: the image can stay private without a
+public repository, and it needs no credential beyond the DigitalOcean token the
+deploy already uses.
+
+The cluster pulls with a namespaced secret rather than the cluster-wide
+integration, so nothing outside `dnd` is touched:
+
+```sh
+doctl registry kubernetes-manifest --namespace dnd --name mbolt-registry \
+  | kubectl apply -n dnd -f -
+```
+
+That secret holds a read-only registry token. If pulls ever start failing with
+an authorization error, re-run the command above to refresh it.
 
 ### Why the `dnd` namespace
 
@@ -121,8 +140,7 @@ must be added here:
 
 | Secret | Notes |
 |---|---|
-| `DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN` | Same values as `dnd-dashboard` |
-| `DIGITALOCEAN_ACCESS_TOKEN`, `DO_CLUSTER_ID` | Same values as `dnd-dashboard` |
+| `DIGITALOCEAN_ACCESS_TOKEN`, `DO_CLUSTER_ID` | Same values as `dnd-dashboard`; the DO token also authenticates the registry push |
 | `GH_OAUTH_CLIENT_ID`, `GH_OAUTH_CLIENT_SECRET` | From a new GitHub OAuth app, callback `https://nv.mbolt.app/auth/callback` |
 | `SESSION_KEY` | Any long random string, e.g. `openssl rand -base64 48` |
 

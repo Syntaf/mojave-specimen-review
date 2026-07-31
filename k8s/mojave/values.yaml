@@ -2,9 +2,15 @@
 # cert-manager Issuer it relies on are owned by the dnd-dashboard release in the
 # same namespace — see README.md "Why the dnd namespace".
 image:
-  repository: syntaf/mojave-specimen-review
+  # DigitalOcean Container Registry, not Docker Hub. DOCR is in the same cloud
+  # as the cluster, needs no third-party account, and lets the image stay
+  # private with a pull secret instead of requiring a public repository.
+  repository: registry.digitalocean.com/mbolt/mojave-specimen-review
   tag: ""            # defaults to .Chart.AppVersion; CI passes the git SHA
   pullPolicy: IfNotPresent
+  # Created with: doctl registry kubernetes-manifest --namespace dnd --name mbolt-registry
+  pullSecrets:
+    - mbolt-registry
 
 replicaCount: 1
 
