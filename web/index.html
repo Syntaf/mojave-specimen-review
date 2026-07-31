@@ -1,0 +1,639 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Front Yard Specimen Review — Mojave Natives</title>
+<style>
+@font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/archivo-normal-08c6b967.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 800;font-display:swap;src:url(/fonts/fraunces-italic-2bf3c7e2.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 800;font-display:swap;src:url(/fonts/fraunces-normal-b0255027.woff2) format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/space-mono-normal-c6951139.woff2) format('woff2')}
+@font-face{font-family:'Space Mono';font-style:normal;font-weight:700;font-display:swap;src:url(/fonts/space-mono-normal-341a2540.woff2) format('woff2')}
+</style>
+
+<style>
+  :root{
+    --caliche:#E7E4DB;
+    --ink:#23202A; --ink-line:#413C4E; --plate:#1A1821;
+    --bone:#F6F4EF;
+    --sage:#8B9A7E; --sage-dim:#6E7C63;
+    --beavertail:#B32A6E; --lichen:#9A8A52; --rule:#C7C2B4;
+    --gut:clamp(16px,3vw,32px);
+    --display:"Fraunces",Georgia,"Times New Roman",serif;
+    --body:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --tag:"Space Mono","SFMono-Regular",Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none!important}
+  html,body{margin:0;padding:0}
+  body{background:var(--caliche);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+    background-image:radial-gradient(rgba(35,32,42,.09) .6px,transparent .7px);background-size:4px 4px}
+  .wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 var(--gut) 96px}
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+  :focus-visible{outline:2px solid var(--beavertail);outline-offset:3px;border-radius:2px}
+  .eyebrow{font-family:var(--tag);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-dim)}
+
+  .whoami{display:flex;align-items:center;gap:9px;margin-top:18px;font-family:var(--tag);font-size:10px;
+    letter-spacing:.1em;text-transform:uppercase;color:#6C6678}
+  .whoami img{width:19px;height:19px;border-radius:50%;display:block}
+  .whoami a{color:var(--beavertail);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px}
+  .whoami a:hover{border-color:var(--beavertail)}
+  .whoami .ro{color:var(--lichen)}
+  .sheet.readonly .stamp,.sheet.readonly .notebtn{opacity:.4;pointer-events:none}
+  header.mast{padding:44px 0 22px;border-bottom:1px solid var(--rule)}
+  .mast h1{font-family:var(--display);font-variation-settings:"SOFT" 40,"WONK" 1,"opsz" 120;font-weight:600;
+    font-size:clamp(34px,6.4vw,60px);line-height:.98;letter-spacing:-.02em;margin:10px 0 0}
+  .mast h1 em{font-style:italic;color:var(--beavertail)}
+  .mast .sub{max-width:54ch;margin:14px 0 0;color:#4C4756;font-size:14.5px}
+  .tally{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .tally b{font-family:var(--tag);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:400;
+    padding:6px 11px;border:1px solid var(--rule);border-radius:100px;display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.35)}
+  .tally b span{font-weight:700;font-size:12px}
+  .tally b.yes span{color:var(--beavertail)}
+  .tally b.maybe span{color:var(--lichen)}
+
+  .notice{display:flex;gap:14px;align-items:flex-start;margin-top:20px;padding:12px 14px;
+    border:1px solid var(--rule);border-left:3px solid var(--sage);background:rgba(255,255,255,.42);border-radius:2px}
+  .notice p{margin:0;font-size:13px;color:#4C4756;max-width:76ch}
+  .notice strong{font-weight:600}
+  .notice button{font-family:var(--tag);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#8D8798;margin-left:auto;flex:none}
+  .notice button:hover{color:var(--ink)}
+  .notice[hidden]{display:none}
+
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:16px 0;border-bottom:1px solid var(--rule);
+    position:sticky;top:0;z-index:20;background:linear-gradient(var(--caliche) 78%,rgba(231,228,219,0));backdrop-filter:blur(3px)}
+  .search{flex:1 1 190px;min-width:150px;border:1px solid var(--rule);background:rgba(255,255,255,.5);
+    padding:8px 12px;border-radius:2px;font-size:14px;color:var(--ink)}
+  .search::placeholder{color:#8D8798}
+  .chip{font-family:var(--tag);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;
+    border:1px solid var(--rule);border-radius:2px;background:rgba(255,255,255,.4);white-space:nowrap;transition:background .15s,border-color .15s}
+  .chip:hover{border-color:var(--ink)}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+  .seg{display:flex;border:1px solid var(--rule);border-radius:2px;overflow:hidden}
+  .seg .chip{border:none;border-left:1px solid var(--rule);border-radius:0}
+  .seg .chip:first-child{border-left:none}
+
+  .body-grid{display:grid;grid-template-columns:168px 1fr;gap:38px;align-items:start;margin-top:30px}
+  nav.strata{position:sticky;top:74px}
+  nav.strata .eyebrow{display:block;margin-bottom:12px}
+  .stratum{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;width:100%;text-align:left;
+    padding:9px 0;border-top:1px solid var(--rule);transition:color .15s}
+  .stratum:hover{color:var(--beavertail)}
+  .stratum .bar{height:7px;border-radius:1px;background:var(--sage);opacity:.45;transition:opacity .15s,background .15s}
+  .stratum[aria-pressed="true"] .bar{opacity:1;background:var(--beavertail)}
+  .stratum .nm{font-size:13.5px;line-height:1.2}
+  .stratum .ct{font-family:var(--tag);font-size:10px;color:#8D8798;letter-spacing:.06em}
+  .stratum[aria-pressed="true"] .nm{font-weight:600}
+
+  .sheets{display:flex;flex-direction:column;gap:20px;min-width:0}
+  .sheet{background:var(--ink);color:var(--bone);border-radius:3px;display:grid;
+    grid-template-columns:minmax(0,300px) minmax(0,1fr);overflow:hidden;position:relative;
+    box-shadow:0 1px 0 rgba(35,32,42,.18),0 14px 28px -22px rgba(35,32,42,.7)}
+  .sheet.is-pass{opacity:.42}
+  .sheet.is-pass:hover,.sheet.is-pass:focus-within{opacity:1}
+
+  .plate{background:var(--plate);position:relative;min-height:236px;display:flex;flex-direction:column}
+  .plate svg.draw{width:100%;height:auto;display:block;flex:1}
+  .frame{position:relative;flex:1;overflow:hidden;background:var(--plate)}
+  .frame img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;opacity:0;transition:opacity .45s ease}
+  .frame img.ready{opacity:1}
+  .plate .nav{position:absolute;inset:auto 0 0;display:flex;justify-content:space-between;padding:8px;pointer-events:none}
+  .plate .nav button{pointer-events:auto;width:30px;height:30px;border-radius:50%;background:rgba(26,24,33,.72);
+    color:var(--bone);font-size:14px;line-height:1;display:grid;place-items:center;backdrop-filter:blur(2px);transition:background .15s}
+  .plate .nav button:hover{background:var(--beavertail)}
+  .dots{display:flex;gap:4px;justify-content:center;padding:8px 8px 6px;background:var(--plate)}
+  .dots i{width:14px;height:2px;background:#4A4458;display:block;transition:background .2s}
+  .dots i.on{background:var(--sage)}
+  .platebar{display:flex;flex-wrap:wrap;align-items:center;gap:3px 12px;padding:0 10px 9px;background:var(--plate);
+    font-family:var(--tag);font-size:9px;letter-spacing:.05em;color:#7A7488;min-height:24px}
+  .plate .empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:9px;text-align:center;padding:26px 22px}
+  .plate .empty .lead{font-family:var(--display);font-size:17px;font-weight:500;color:#B9B2CC}
+  .plate .empty p{margin:0;font-size:12px;line-height:1.5;color:#8D86A0;max-width:30ch}
+  .plate .empty .lookup{font-family:var(--tag);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--sage);border:1px solid var(--sage-dim);border-radius:2px;padding:6px 11px;text-decoration:none;
+    transition:background .15s,color .15s}
+  .plate .empty .lookup:hover{background:var(--sage);color:var(--plate)}
+  .plate .empty .lookup.alt{color:#7A7488;border-color:#3C3748}
+  .plate .empty .lookup.alt:hover{background:#3C3748;color:var(--bone)}
+  .platebar .grow{flex:1 0 100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .platebar a,.platebar button{color:#7A7488;font-family:var(--tag);font-size:9px;letter-spacing:.1em;
+    text-transform:uppercase;text-decoration:none;border-bottom:1px solid #3C3748;padding-bottom:1px;flex:none}
+  .platebar a:hover,.platebar button:hover{color:var(--sage);border-color:var(--sage-dim)}
+
+  .info{padding:20px 22px 18px;display:flex;flex-direction:column;min-width:0}
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:9px}
+  .badge{font-family:var(--tag);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 7px;
+    border:1px solid var(--ink-line);color:#A9A2BC;border-radius:1px}
+  .badge.native{color:var(--sage);border-color:var(--sage-dim)}
+  .badge.adapted{color:var(--lichen);border-color:#6B6142}
+  .badge.star{color:var(--beavertail);border-color:#6B2247}
+  .badge.care{color:#C99BB4;border-color:#5C3A50}
+  .info h2{font-family:var(--display);font-variation-settings:"SOFT" 40,"WONK" 1,"opsz" 60;font-weight:500;
+    font-size:clamp(21px,2.6vw,27px);line-height:1.08;margin:0;letter-spacing:-.01em}
+  .binomial{font-family:var(--display);font-style:italic;font-weight:300;font-size:14.5px;color:var(--sage);margin:3px 0 14px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:12px 16px;padding:13px 0;
+    border-top:1px solid var(--ink-line);border-bottom:1px solid var(--ink-line);margin:0}
+  .facts div{min-width:0}
+  .facts dt{font-family:var(--tag);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:#7A7488;margin:0 0 3px}
+  .facts dd{margin:0;font-size:12.5px;line-height:1.35;color:#DDD8E6}
+  .why{margin:13px 0 0;font-size:13.5px;line-height:1.5;color:#C4BED4}
+  .verdicts{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:16px;align-items:center}
+  .stamp{font-family:var(--tag);font-size:10px;letter-spacing:.13em;text-transform:uppercase;padding:7px 13px;
+    border:1.5px solid var(--ink-line);color:#9E97B4;border-radius:2px;position:relative;transition:color .15s,border-color .15s,transform .15s}
+  .stamp:hover{color:var(--bone);border-color:#6B6480}
+  .stamp[aria-pressed="true"]{border-style:double;border-width:3.5px;font-weight:700;animation:press .38s cubic-bezier(.2,1.7,.4,1)}
+  .stamp.yes[aria-pressed="true"]{color:var(--beavertail);border-color:var(--beavertail);transform:rotate(-2.2deg)}
+  .stamp.maybe[aria-pressed="true"]{color:var(--lichen);border-color:var(--lichen);transform:rotate(1.4deg)}
+  .stamp.no[aria-pressed="true"]{color:#8D86A0;border-color:#5A5470;transform:rotate(2.6deg)}
+  @keyframes press{0%{transform:scale(1.5) rotate(-9deg);opacity:.35}60%{transform:scale(.96) rotate(-1deg);opacity:1}100%{}}
+  .notebtn{margin-left:auto;font-family:var(--tag);font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    color:#7A7488;border-bottom:1px dotted #5A5470}
+  .notebtn:hover{color:var(--sage)}
+  .note{width:100%;margin-top:12px;background:var(--plate);border:1px solid var(--ink-line);color:var(--bone);
+    font-family:var(--body);font-size:13px;padding:9px 11px;border-radius:2px;resize:vertical;min-height:52px}
+  .note::placeholder{color:#635C77}
+  .note[hidden]{display:none}
+
+  .list-head{display:flex;flex-wrap:wrap;gap:14px;align-items:baseline;margin:6px 0 18px}
+  .list-head h2{font-family:var(--display);font-weight:500;font-size:26px;margin:0;letter-spacing:-.01em}
+  .row{display:grid;grid-template-columns:8px 1fr auto;gap:14px;align-items:baseline;padding:13px 0;border-top:1px solid var(--rule)}
+  .row .mark{width:8px;height:8px;border-radius:50%;background:var(--beavertail);margin-top:6px}
+  .row.maybe .mark{background:var(--lichen)}
+  .row .nm{font-family:var(--display);font-size:18px;font-weight:500;line-height:1.2}
+  .row .bn{font-family:var(--display);font-style:italic;font-weight:300;font-size:13px;color:var(--sage-dim)}
+  .row .mt{font-size:13px;color:#4C4756;margin-top:4px;max-width:60ch}
+  .row .strat{font-family:var(--tag);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#8D8798}
+  .blank{border:1px dashed var(--rule);padding:34px 26px;text-align:center;border-radius:2px;color:#5A5466}
+  .blank strong{display:block;font-family:var(--display);font-size:19px;font-weight:500;margin-bottom:6px;color:var(--ink)}
+
+  footer.foot{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:#6C6678;max-width:72ch}
+  footer.foot p{margin:0 0 7px}
+
+  @media (max-width:860px){
+    .body-grid{grid-template-columns:1fr;gap:20px}
+    nav.strata{position:static}
+    nav.strata .list{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+    .stratum{border-top:none;border:1px solid var(--rule);border-radius:2px;padding:7px 11px;grid-template-columns:1fr;width:auto;flex:0 0 auto}
+    .stratum .bar{display:none}
+    .stratum .ct{display:inline;margin-left:6px}
+    .sheet{grid-template-columns:1fr}
+    .frame img{aspect-ratio:16/10}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+    .stamp[aria-pressed="true"]{transform:none!important}
+  }
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <div class="eyebrow">Clark County, Nevada &nbsp;·&nbsp; Mojave Desert &nbsp;·&nbsp; Planting window: Oct–Nov</div>
+    <h1>Front yard <em>specimen</em> review</h1>
+    <p class="sub">Forty-two plants from the research, sorted by the layer they occupy in a real Mojave plant community. Every plant carries two or three photographs you can page through; stamp the ones you like and the shortlist builds itself.</p>
+    <div class="tally">
+      <b class="yes">Plant it <span id="t-yes">0</span></b>
+      <b class="maybe">Maybe <span id="t-maybe">0</span></b>
+      <b>Pass <span id="t-no">0</span></b>
+      <b>Unrated <span id="t-none">42</span></b>
+    </div>
+    <div class="whoami" id="whoami"></div>
+    <div class="notice" id="notice">
+      <p><strong>This shortlist is shared.</strong> Stamps and notes are saved on the server, so whoever is
+        signed in sees the same list from any device. Use the arrows on a plate (or ← →) to page through its
+        photographs, and “More photos ↗” to search the web for a species whose pictures don’t do it justice.</p>
+      <button id="dismiss" aria-label="Dismiss this notice">Dismiss</button>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <input class="search" id="q" type="search" placeholder="Search name or trait — “hummingbird”, “yucca”, “shade”…" aria-label="Search plants">
+    <button class="chip" id="f-native" aria-pressed="false">True NV natives</button>
+    <button class="chip" id="f-rated" aria-pressed="false">Unrated only</button>
+    <div class="seg" role="group" aria-label="View">
+      <button class="chip" id="v-browse" aria-pressed="true">Browse</button>
+      <button class="chip" id="v-list" aria-pressed="false">Shortlist</button>
+    </div>
+  </div>
+
+  <div class="body-grid" id="browse">
+    <nav class="strata" aria-label="Plant community layers">
+      <span class="eyebrow">Strata</span>
+      <div class="list" id="strata"></div>
+    </nav>
+    <main class="sheets" id="sheets"></main>
+  </div>
+
+  <div id="list" hidden></div>
+
+  <footer class="foot">
+    <p>Photographs come from Wikimedia Commons, resized and served from this site. Each plate credits its
+      photographer and licence; “Source ↗” opens that file’s page on Commons for the full-resolution original and
+      full licence terms. When a plate’s photographs don’t do the plant justice, “More photos ↗” opens an image
+      search for that species.</p>
+    <p>Every cactus and yucca listed here is a protected species in Nevada — buy nursery-grown stock, never dig from wild land.</p>
+  </footer>
+</div>
+
+<script>
+/* ── Data ─────────────────────────────────────────────────
+   fm = growth form (drives the drawing) · fol = foliage colour
+   bl = bloom colour · nat = true southern-NV native                */
+const STRATA=[["tree","Canopy"],["succ","Structure"],["shrub","Shrub"],["per","Bloom"],["grass","Grass"]];
+const P=[
+ {id:"chli",n:"Desert Willow",b:"Chilopsis linearis",s:"tree",nat:1,q:"Chilopsis linearis",fm:"tree",fol:"#7E9A6A",bl:"#C48BC0",
+  h:"15–25 ft",f:"Pink-lavender trumpets, late spring–summer",w:"Low",star:"Rebate tree",
+  why:"The one native that gives you real flowering shade. Hummingbirds work it all summer, and it qualifies for the $100-per-tree SNWA bonus.",care:"Seed pods drop — ask for a sterile cultivar."},
+ {id:"segr",n:"Catclaw Acacia",b:"Senegalia greggii",s:"tree",nat:1,q:"Acacia greggii",fm:"tree",fol:"#8A9A72",bl:"#E6E0BC",
+  h:"10–15 ft",f:"Cream spikes, spring",w:"Very low",
+  why:"Trainable from big shrub to small tree. Fragrant in spring and one of the best wildlife plants in the Mojave.",care:"Recurved thorns catch skin and clothing — keep it well off paths."},
+ {id:"prpu",n:"Screwbean Mesquite",b:"Prosopis pubescens",s:"tree",nat:1,q:"Prosopis pubescens",fm:"tree",fol:"#93A67C",bl:"#D8CE96",
+  h:"15–20 ft",f:"Yellow catkins, spring",w:"Low",
+  why:"The smallest mesquite, so it actually fits a front yard. Shaggy bark and corkscrew seed pods give it real character.",care:"Litters pods; deep water occasionally or it stays scrubby."},
+ {id:"prgl",n:"Honey Mesquite",b:"Prosopis glandulosa",s:"tree",nat:1,q:"Prosopis glandulosa",fm:"tree",fol:"#93A67C",bl:"#D8CE96",
+  h:"20–30 ft",f:"Cream catkins, spring",w:"Low",
+  why:"Broad filtered canopy, fast for a desert tree, and a big canopy number toward the rebate's 50% coverage.",care:"Thorny, and it will grow larger than people expect."},
+ {id:"cere",n:"Netleaf Hackberry",b:"Celtis reticulata",s:"tree",nat:1,q:"Celtis reticulata",fm:"tree",fol:"#7E9068",bl:"",
+  h:"20–30 ft",f:"Inconspicuous; berries for birds",w:"Low",
+  why:"Underused native shade tree. Put it on the south or west side and it will cool the wall behind it.",care:"Deciduous and plain-looking in winter."},
+ {id:"pimo",n:"Single-leaf Piñon",b:"Pinus monophylla",s:"tree",nat:1,q:"Pinus monophylla",fm:"conifer",fol:"#6E8570",bl:"",
+  h:"15–30 ft, slow",f:"Evergreen; edible pine nuts",w:"Very low",star:"State tree",
+  why:"Nevada's state tree, and evergreen structure in a yard that otherwise goes bare in winter.",care:"A higher-elevation species — it sulks in valley heat. Give it the coolest corner."},
+ {id:"pafl",n:"Blue Palo Verde",b:"Parkinsonia florida",s:"tree",nat:0,q:"Parkinsonia florida",fm:"tree",fol:"#9CB56E",bl:"#E8C64A",
+  h:"20–30 ft",f:"Yellow blaze, spring",w:"Low",
+  why:"Green bark and a spectacular spring bloom. Rebate-eligible and everywhere in the valley.",care:"Sonoran Desert native, not Nevadan — off-theme if you're staying strict."},
+
+ {id:"yubr",n:"Joshua Tree",b:"Yucca brevifolia",s:"succ",nat:1,q:"Yucca brevifolia",fm:"joshua",fol:"#7C8F5E",bl:"#EDE6CC",
+  h:"15–30 ft, very slow",f:"Cream clusters, spring",w:"Very low",star:"Mojave endemic",
+  why:"The signature silhouette of this desert and nothing else looks like it. One well-placed specimen carries the whole yard.",care:"Protected species — nursery stock only. Grows inches a year, so buy the size you want."},
+ {id:"yusc",n:"Mojave Yucca",b:"Yucca schidigera",s:"succ",nat:1,q:"Yucca schidigera",fm:"yuccatrunk",fol:"#8A9A6E",bl:"#EFE8D2",
+  h:"6–15 ft",f:"Cream panicles, spring",w:"Very low",
+  why:"Trunked and architectural, and it reads as unmistakably Mojave without the slow growth of a Joshua tree.",care:"Leaf tips are genuinely sharp. Set it back from the walk."},
+ {id:"yuba",n:"Banana Yucca",b:"Yucca baccata",s:"succ",nat:1,q:"Yucca baccata",fm:"rosette",fol:"#7E9080",bl:"#EDE4CF",
+  h:"3 ft tall, wider",f:"Cream, often purple-flushed, Apr–Jul",w:"Very low",
+  why:"Blue-green rosette with curling white fibers along the leaves — the best mid-height structure on this list.",care:"Spine-tipped leaves; wider than it is tall, so give it room."},
+ {id:"opba",n:"Beavertail Prickly Pear",b:"Opuntia basilaris",s:"succ",nat:1,q:"Opuntia basilaris",fm:"pads",fol:"#9BA9AE",bl:"#C42A78",
+  h:"12–18 in",f:"Electric magenta, Apr–Jun",w:"Very low",star:"Best bloom",
+  why:"That magenta is the most startling color in the Mojave, and the blue-gray pads look good the other eleven months.",care:"Looks spineless but carries glochids — hair-fine and miserable. Not near a walkway."},
+ {id:"oper",n:"Mojave Prickly Pear",b:"Opuntia erinacea",s:"succ",nat:1,q:"Opuntia erinacea",fm:"pads",fol:"#93A18C",bl:"#E4C24C",
+  h:"12–18 in",f:"Yellow to rose, spring",w:"Very low",
+  why:"Long white spines that catch low sun. Tougher and more cold-hardy than beavertail.",care:"Very spiny — a back-of-bed plant."},
+ {id:"ectr",n:"Mojave Mound Cactus",b:"Echinocereus triglochidiatus",s:"succ",nat:1,q:"Echinocereus triglochidiatus",fm:"moundcactus",fol:"#6E8A60",bl:"#D8402E",
+  h:"8–18 in mounds",f:"Scarlet cups, Mar–May",w:"Very low",
+  why:"Clusters into a mound and then covers itself in waxy red flowers that hummingbirds pollinate. A showstopper at boulder scale.",care:"Demands sharp drainage — plant it high, never in a low spot."},
+ {id:"cyec",n:"Silver Cholla",b:"Cylindropuntia echinocarpa",s:"succ",nat:1,q:"Cylindropuntia echinocarpa",fm:"cholla",fol:"#B9B7A6",bl:"#C9CE7A",
+  h:"3–5 ft",f:"Greenish-yellow, spring",w:"Very low",
+  why:"Backlit at sunset the silver spines glow. Cactus wrens and thrashers nest in it.",care:"The spines detach and stick. Serious placement decision — far from kids, dogs, and hoses."},
+ {id:"fecy",n:"California Barrel Cactus",b:"Ferocactus cylindraceus",s:"succ",nat:1,q:"Ferocactus cylindraceus",fm:"barrel",fol:"#7E8F5E",bl:"#E8C64A",
+  h:"3–6 ft, slow",f:"Yellow crown, spring",w:"Very low",
+  why:"A native barrel with red-tinged spines — the honest local answer to the golden barrels everyone plants.",care:"Slow. Buy it near the size you want."},
+ {id:"agut",n:"Utah Agave",b:"Agave utahensis",s:"succ",nat:1,q:"Agave utahensis",fm:"rosette",fol:"#8FA090",bl:"#DCD3A8",
+  h:"12–24 in rosette",f:"Tall spike once, then pups",w:"Very low",
+  why:"The cold-hardy native agave. Tight geometric rosette that holds its shape year-round.",care:"Terminal spines are needle-sharp. The main rosette dies after blooming, leaving offsets."},
+ {id:"ecgr",n:"Golden Barrel Cactus",b:"Echinocactus grusonii",s:"succ",nat:0,q:"Echinocactus grusonii",fm:"barrel",fol:"#8FA24E",bl:"#E8C64A",
+  h:"2–3 ft",f:"Yellow crown, summer",w:"Very low",
+  why:"Golden spines that photograph beautifully in groups of three or five.",care:"Central Mexican native, not Nevadan — and endangered in the wild. Off-theme."},
+ {id:"hepa",n:"Red Yucca",b:"Hesperaloe parviflora",s:"succ",nat:0,q:"Hesperaloe parviflora",fm:"wand",fol:"#7C8E74",bl:"#D9604E",
+  h:"3 ft; 5 ft spikes",f:"Coral spikes, spring–fall",w:"Low",
+  why:"Blooms for months, no spines, hummingbird favorite. The easiest plant on this list.",care:"Texas native. Also planted in front of every strip mall in the valley."},
+
+ {id:"latr",n:"Creosote Bush",b:"Larrea tridentata",s:"shrub",nat:1,q:"Larrea tridentata",fm:"shrub",fol:"#6F8A5C",bl:"#E0C94E",
+  h:"3–10 ft",f:"Small yellow, spring–summer",w:"None once set",star:"Keystone",
+  why:"The defining plant of this desert, and the reason rain here has a smell. Evergreen, resinous, effectively immortal.",care:"Wants zero supplemental water after establishment — overwatering is what kills it."},
+ {id:"enfa",n:"Brittlebush",b:"Encelia farinosa",s:"shrub",nat:1,q:"Encelia farinosa",fm:"shrub",fol:"#A9B29B",bl:"#E8C64A",
+  h:"2–3 ft",f:"Yellow daisies, spring",w:"Very low",
+  why:"Silver mounds that vanish under yellow flowers every spring. Cheap, fast, and it fills space while slower plants size up.",care:"Short-lived — a few years — and frost-tender. Plan to replace it."},
+ {id:"fapa",n:"Apache Plume",b:"Fallugia paradoxa",s:"shrub",nat:1,q:"Fallugia paradoxa",fm:"shrub",fol:"#8A9A78",bl:"#F0EDE4",
+  h:"4–6 ft",f:"White roses, then pink plumes, spring–fall",w:"Low",star:"Longest season",
+  why:"Flowers and feathery seed plumes at the same time, for months. Airy enough to see through, which keeps a bed from feeling walled off.",care:"Wants a little more water than creosote to look its best."},
+ {id:"epne",n:"Nevada Mormon Tea",b:"Ephedra nevadensis",s:"shrub",nat:1,q:"Ephedra nevadensis",fm:"ephedra",fol:"#7E9464",bl:"",
+  h:"2–4 ft",f:"Small cones, spring",w:"Very low",
+  why:"Leafless green jointed stems — a texture nothing else on this list gives you.",care:"Sparse and twiggy when young. Buy the largest size available."},
+ {id:"epvi",n:"Green Mormon Tea",b:"Ephedra viridis",s:"shrub",nat:1,q:"Ephedra viridis",fm:"ephedra",fol:"#6E9155",bl:"",
+  h:"2–4 ft",f:"Small cones, spring",w:"Very low",
+  why:"Brighter and denser than its cousin, and it holds a strong green through the worst of summer.",care:"Same twiggy adolescence."},
+ {id:"cora",n:"Blackbrush",b:"Coleogyne ramosissima",s:"shrub",nat:1,q:"Coleogyne ramosissima",fm:"shrub",fol:"#5F6B55",bl:"#C2BE7C",
+  h:"2–4 ft",f:"Yellowish, spring",w:"Very low",
+  why:"Dark, dense, and intricately branched. If you want the yard to read as a real plant community rather than a collection, this is the matrix.",care:"Quiet — no showy bloom. It's a supporting player."},
+ {id:"amdu",n:"White Bursage",b:"Ambrosia dumosa",s:"shrub",nat:1,q:"Ambrosia dumosa",fm:"shrub",fol:"#9BA491",bl:"",
+  h:"1–2 ft",f:"Inconspicuous",w:"None once set",
+  why:"Creosote's constant companion in the wild. Planting the pair together is what makes a Mojave landscape look authentic.",care:"Wind-pollinated, so it adds a little pollen. Modest looking."},
+ {id:"sado",n:"Desert Sage",b:"Salvia dorrii",s:"shrub",nat:1,q:"Salvia dorrii",fm:"shrub",fol:"#A3AC9A",bl:"#6E5FA8",
+  h:"2–3 ft",f:"Blue-violet whorls, late spring",w:"Very low",star:"Pollinators",
+  why:"Silver aromatic foliage under violet-blue flowers, swarmed by bees. Best scent-and-color combination among the natives.",care:"Needs excellent drainage; rots in heavy irrigated soil."},
+ {id:"atca",n:"Fourwing Saltbush",b:"Atriplex canescens",s:"shrub",nat:1,q:"Atriplex canescens",fm:"shrub",fol:"#97A490",bl:"#CFC9A8",
+  h:"3–6 ft",f:"Papery four-winged seeds, summer",w:"Very low",
+  why:"Fast gray-green screening shrub that takes the worst soil you have, including caliche and salt.",care:"Coarse. Shear it occasionally or it gets rangy."},
+ {id:"psfr",n:"Indigo Bush",b:"Psorothamnus fremontii",s:"shrub",nat:1,q:"Psorothamnus fremontii",fm:"shrub",fol:"#A5AC9E",bl:"#4A4A9E",
+  h:"2–4 ft",f:"Deep indigo pea flowers, spring",w:"Very low",
+  why:"That indigo against silver twigs is one of the great color moments in the Mojave, and the taproot fractures caliche for you.",care:"Hard to source — call ahead to the native nurseries."},
+ {id:"lefr",n:"Texas Ranger",b:"Leucophyllum frutescens",s:"shrub",nat:0,q:"Leucophyllum frutescens",fm:"shrub",fol:"#9DA894",bl:"#9A5FA8",
+  h:"4–6 ft",f:"Purple, triggered by humidity",w:"Low",
+  why:"Blooms after monsoon storms as if on cue. Dependable and widely available.",care:"Texas and northern Mexico native. Often sheared into cubes, which ruins it."},
+
+ {id:"pepa",n:"Palmer's Penstemon",b:"Penstemon palmeri",s:"per",nat:1,q:"Penstemon palmeri",fm:"spike",fol:"#7E9070",bl:"#E0A8C0",
+  h:"3–6 ft spikes",f:"Pale pink, fragrant, late spring–summer",w:"Very low",star:"Only fragrant penstemon",
+  why:"Tall scented spikes that draw bumblebees and hummingbirds, over evergreen basal rosettes. Nothing else here gives you height in the bloom layer.",care:"Short-lived but self-sows. Let some seed heads stand."},
+ {id:"peea",n:"Firecracker Penstemon",b:"Penstemon eatonii",s:"per",nat:1,q:"Penstemon eatonii",fm:"spike",fol:"#7E9070",bl:"#D63C2E",
+  h:"2–3.5 ft",f:"Scarlet tubes, late winter–spring",w:"Very low",star:"Hummingbirds",
+  why:"The first real color of the year, often in February, and hummingbirds find it immediately.",care:"Cut spent spikes to push a second flush."},
+ {id:"spam",n:"Desert Globemallow",b:"Sphaeralcea ambigua",s:"per",nat:1,q:"Sphaeralcea ambigua",fm:"mound",fol:"#9AA48E",bl:"#E08A3C",
+  h:"2–3 ft",f:"Apricot, spring through fall",w:"Very low",
+  why:"Blooms across most of the year on almost no water. Apricot is an unusual color that plays well against blue-gray foliage.",care:"Fine leaf hairs irritate eyes — old-timers call it sore-eye poppy. Wear gloves when cutting back."},
+ {id:"bamu",n:"Desert Marigold",b:"Baileya multiradiata",s:"per",nat:1,q:"Baileya multiradiata",fm:"mound",fol:"#A8AF9C",bl:"#E8C64A",
+  h:"1–2 ft",f:"Yellow daisies, Feb–Nov",w:"Very low",
+  why:"Nearly year-round flowers over woolly silver foliage, and shallow-rooted enough that caliche doesn't bother it.",care:"Short-lived; it reseeds where it wants to, which you may or may not want."},
+ {id:"psco",n:"Paper Flower",b:"Psilostrophe cooperi",s:"per",nat:1,q:"Psilostrophe cooperi",fm:"mound",fol:"#93A183",bl:"#E5C84E",
+  h:"1–2 ft",f:"Yellow, drying to papery straw",w:"Very low",
+  why:"Neat yellow dome whose spent flowers dry in place and hold for weeks — long interest without deadheading.",care:"Wants full brutal sun and lean soil."},
+ {id:"mimu",n:"Desert Four O'Clock",b:"Mirabilis multiflora",s:"per",nat:1,q:"Mirabilis multiflora",fm:"mound",fol:"#6E8A60",bl:"#B8348C",
+  h:"1–2 ft × 4 ft wide",f:"Magenta trumpets, opening late day",w:"Low",
+  why:"Opens in the evening — the plant for sitting out front after the heat breaks. Hawkmoths show up at dusk.",care:"Dies to the ground in winter and spreads wide. Give it 4 ft."},
+ {id:"kean",n:"Bush Snapdragon",b:"Keckiella antirrhinoides",s:"per",nat:1,q:"Keckiella antirrhinoides",fm:"shrub",fol:"#7E9070",bl:"#E3C24E",
+  h:"3–5 ft",f:"Tubular, spring",w:"Very low",
+  why:"Shrubby penstemon relative with tubular hummingbird flowers and a loose, natural habit.",care:"Uncommon in the trade — a native-nursery order."},
+ {id:"juca",n:"Chuparosa",b:"Justicia californica",s:"per",nat:0,q:"Justicia californica",fm:"shrub",fol:"#7E9070",bl:"#D6402E",
+  h:"3–5 ft",f:"Red tubes, most of the year",w:"Low",
+  why:"Close to a permanent hummingbird feeder. Blooms in months when little else does.",care:"Lower Colorado Desert plant, only marginal in Nevada — frost can knock it back."},
+
+ {id:"achy",n:"Indian Ricegrass",b:"Achnatherum hymenoides",s:"grass",nat:1,q:"Achnatherum hymenoides",fm:"grass",fol:"#B3AC7E",bl:"#D8D2A8",
+  h:"1–2.5 ft",f:"Airy spangled seed heads, spring",w:"Very low",star:"State grass",
+  why:"Nevada's official state grass, and the most beautiful thing here in motion — the seed heads catch light and never stop moving.",care:"Cool-season: it goes dormant and straw-colored in summer. That's normal, not dead."},
+ {id:"plri",n:"Big Galleta",b:"Pleuraphis rigida",s:"grass",nat:1,q:"Pleuraphis rigida",fm:"grass",fol:"#8FA089",bl:"#CFC9A0",
+  h:"1–3 ft",f:"Feathery spikes, spring",w:"Very low",
+  why:"Blue-green, stiff, and genuinely bombproof — a true southern Nevada bunchgrass for the hottest exposure.",care:"Coarser than ricegrass. Best massed, not used as a specimen."},
+ {id:"acsp",n:"Desert Needlegrass",b:"Achnatherum speciosum",s:"grass",nat:1,q:"Achnatherum speciosum",fm:"grass",fol:"#ADA98A",bl:"#E2DCC2",
+  h:"1–2 ft",f:"Silvery awned plumes, spring",w:"Very low",
+  why:"Fine-textured silver plumes at knee height. Perfect softening at the edge of a dry creek bed.",care:"Sharp awns can bother dogs' paws and ears."},
+ {id:"mupo",n:"Bush Muhly",b:"Muhlenbergia porteri",s:"grass",nat:1,q:"Muhlenbergia porteri",fm:"grass",fol:"#A29A7C",bl:"#B08AA8",
+  h:"1–3 ft",f:"Purple-pink haze, late summer",w:"Very low",
+  why:"Warm-season, so it peaks when the cool-season grasses are dormant — pair it with ricegrass and something always looks alive.",care:"Sprawling and open; it likes to lean on a shrub."},
+ {id:"bogr",n:"Blue Grama",b:"Bouteloua gracilis",s:"grass",nat:1,q:"Bouteloua gracilis",fm:"grass",fol:"#8FA07E",bl:"#C6BE96",
+  h:"12–20 in",f:"Horizontal 'eyebrow' seed heads, summer",w:"Low",
+  why:"Those sideways seed heads are unmistakable, and it's the one grass here that can read as a soft low meadow.",care:"Wants a bit more water than the others in valley heat."}
+];
+
+const PHOTOS={"chli":[{"t":"/images/chli_0.webp","p":"https://commons.wikimedia.org/wiki/File:Chilopsis_linearis_flower_2.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/chli_1.webp","p":"https://commons.wikimedia.org/wiki/File:Chilopsis_linearis_Rio_Salado_2.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/chli_2.webp","p":"https://commons.wikimedia.org/wiki/File:Chilopsis_Tree_1.jpg","c":"Almapayokels \u00b7 CC0"}],"segr":[{"t":"/images/segr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Catclaw_acacia_(Acacia_greggii);_Wonderland_of_Rocks.jpg","c":"Robb Hannawacker \u00b7 Public domain"},{"t":"/images/segr_1.webp","p":"https://commons.wikimedia.org/wiki/File:ACACIA,_CATCLAW_(Acacia_greggii)_(5-13-11)_patagonia_lake,_scc,_az_-02_(5716216337).jpg","c":"ALAN SCHMIERER \u00b7 CC0"}],"prpu":[{"t":"/images/prpu_0.webp","p":"https://commons.wikimedia.org/wiki/File:Prosopis_pubescens_inflorescence_2003-06-02.jpg","c":"Curtis Clark \u00b7 CC BY-SA 2.5"}],"prgl":[{"t":"/images/prgl_0.webp","p":"https://commons.wikimedia.org/wiki/File:Prosopis_glandulosa_(homeredwardprice)_001.jpg","c":"homeredwardprice \u00b7 CC BY 2.0"},{"t":"/images/prgl_1.webp","p":"https://commons.wikimedia.org/wiki/File:P145_Honey_mesquite_(Prosopis_glandulosa)_with_mistletoe_(Phoradendron_tomentosum)_(15321664643).jpg","c":"Royce Milam \u00b7 CC BY 2.0"},{"t":"/images/prgl_2.webp","p":"https://commons.wikimedia.org/wiki/File:Prosopis_glandulosa_-_52753465184.jpg","c":"sonnia hill \u00b7 CC BY 2.0"}],"cere":[{"t":"/images/cere_0.webp","p":"https://commons.wikimedia.org/wiki/File:Celtis_reticulata_-_Flickr_-_aspidoscelis.jpg","c":"Patrick Alexander \u00b7 CC0"},{"t":"/images/cere_1.webp","p":"https://commons.wikimedia.org/wiki/File:Celtis_laevigata_reticulata_(3720031807).jpg","c":"Matt Lavin \u00b7 CC BY-SA 2.0"},{"t":"/images/cere_2.webp","p":"https://commons.wikimedia.org/wiki/File:Celtis_reticulata_-_Flickr_-_aspidoscelis_(1).jpg","c":"Patrick Alexander \u00b7 CC0"}],"pimo":[{"t":"/images/pimo_0.webp","p":"https://commons.wikimedia.org/wiki/File:Single-leaf_pinyon_2.jpg","c":"Toiyab \u00b7 CC BY-SA 3.0"},{"t":"/images/pimo_1.webp","p":"https://commons.wikimedia.org/wiki/File:Wheeler_flatirons_pastPinyons.jpg","c":"Dcrjsr \u00b7 CC BY 3.0"},{"t":"/images/pimo_2.webp","p":"https://commons.wikimedia.org/wiki/File:WhiteMtn_past_pinyonRidge.jpg","c":"Jane S. Richardson \u00b7 CC BY 3.0"}],"pafl":[{"t":"/images/pafl_0.webp","p":"https://commons.wikimedia.org/wiki/File:Blooming_palo_verde_trees_in_west_Aravaipa_Canyon_(54820903676).jpg","c":"BLMArizona \u00b7 Public domain"}],"yubr":[{"t":"/images/yubr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Joshua_Trees_Yucca_brevifolia_in_Joshua_Tree_National_Park.jpg","c":"Brocken Inaglory \u00b7 CC BY-SA 3.0"},{"t":"/images/yubr_1.webp","p":"https://commons.wikimedia.org/wiki/File:Yucca_brevifolia_0zz.jpg","c":"David J. Stang \u00b7 CC BY-SA 4.0"}],"yusc":[{"t":"/images/yusc_0.webp","p":"https://commons.wikimedia.org/wiki/File:2012.09.09.103159_Yucca_schidigera_Red_Rock_Canyon_Nevada.jpg","c":"Hermann Luyken \u00b7 CC0"},{"t":"/images/yusc_1.webp","p":"https://commons.wikimedia.org/wiki/File:Starr_071221-0140_Yucca_schidigera.jpg","c":"Forest & Kim Starr \u00b7 CC BY 3.0"},{"t":"/images/yusc_2.webp","p":"https://commons.wikimedia.org/wiki/File:Mojave_yucca_to_one_side_with_desert_behind.jpg","c":"Ryan Hagerty \u00b7 Public domain"}],"yuba":[{"t":"/images/yuba_0.webp","p":"https://commons.wikimedia.org/wiki/File:Starr_071222-0320_Yucca_baccata.jpg","c":"Forest & Kim Starr \u00b7 CC BY 3.0"},{"t":"/images/yuba_1.webp","p":"https://commons.wikimedia.org/wiki/File:Narrow_leaf_banana_yucca_(Yucca_baccata)_-_Flickr_-_brewbooks.jpg","c":"brewbooks \u00b7 CC BY-SA 2.0"},{"t":"/images/yuba_2.webp","p":"https://commons.wikimedia.org/wiki/File:Red_rocks_and_Yuccas_(15706969863).jpg","c":"Akos Kokai \u00b7 CC BY 2.0"}],"opba":[{"t":"/images/opba_0.webp","p":"https://commons.wikimedia.org/wiki/File:Opuntia_basilaris_(25751657114).jpg","c":"Chris Hunkeler \u00b7 CC BY-SA 2.0"},{"t":"/images/opba_1.webp","p":"https://commons.wikimedia.org/wiki/File:Beavertail_Cactus_(5422060721).jpg","c":"Rennett Stowe \u00b7 CC BY 2.0"},{"t":"/images/opba_2.webp","p":"https://commons.wikimedia.org/wiki/File:Beavertail_cactus,_Opuntia_basilaris_basilaris_flowering_plant_(15199876386).jpg","c":"Jim Morefield \u00b7 CC BY-SA 2.0"}],"oper":[{"t":"/images/oper_0.webp","p":"https://commons.wikimedia.org/wiki/File:Opuntia_polyacantha_var._erinacea_1.jpg","c":"Wikimedia Commons \u00b7 CC BY-SA 3.0"},{"t":"/images/oper_1.webp","p":"https://commons.wikimedia.org/wiki/File:Opuntia_polyacantha_var._erinacea_2.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"}],"ectr":[{"t":"/images/ectr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Echinocereus_triglochidiatus_(claret-cup_cactus)_2_(23781094070).jpg","c":"James St. John \u00b7 CC BY 2.0"},{"t":"/images/ectr_1.webp","p":"https://commons.wikimedia.org/wiki/File:Echinocereus_triglochidiatus_Kingcup_cactus_(7914866746).jpg","c":"Paul Asman and Jill Lenoble \u00b7 CC BY 2.0"},{"t":"/images/ectr_2.webp","p":"https://commons.wikimedia.org/wiki/File:Echinocereus_triglochidiatus_kz01.jpg","c":"Krzysztof Ziarnek, Kenraiz \u00b7 CC BY-SA 4.0"}],"cyec":[{"t":"/images/cyec_0.webp","p":"https://commons.wikimedia.org/wiki/File:Cylindropuntia_echinocarpa_(6995167481).jpg","c":"Chris M Morris \u00b7 CC BY 2.0"},{"t":"/images/cyec_1.webp","p":"https://commons.wikimedia.org/wiki/File:Cylindropuntia_echinocarpa_1.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/cyec_2.webp","p":"https://commons.wikimedia.org/wiki/File:Cylindropuntia_echinocarpa_2018-04-11_Gold_Butte_NM_01.jpg","c":"Agnieszka Kwiecie\u0144, Nova \u00b7 CC BY-SA 4.0"}],"fecy":[{"t":"/images/fecy_0.webp","p":"https://commons.wikimedia.org/wiki/File:California_Barrel_Cactus_(8938525823).jpg","c":"BLM Nevada \u00b7 CC BY-SA 2.0"},{"t":"/images/fecy_1.webp","p":"https://commons.wikimedia.org/wiki/File:California_Barrel_Cactus_(Ferocactus_cylindraceus)_(3104091014)_(2).jpg","c":"Cliff \u00b7 CC BY 2.0"},{"t":"/images/fecy_2.webp","p":"https://commons.wikimedia.org/wiki/File:Ferocactus_cylindraceus,_49_Palms_Trail_7423_RobbHannawacker.jpg","c":"Robb Hannawacker \u00b7 Public domain"}],"agut":[{"t":"/images/agut_0.webp","p":"https://commons.wikimedia.org/wiki/File:Agave_utahensis_(16143301148).jpg","c":"Akos Kokai \u00b7 CC BY 2.0"},{"t":"/images/agut_1.webp","p":"https://commons.wikimedia.org/wiki/File:Flickr_-_brewbooks_-_Agave_utahensis.jpg","c":"brewbooks \u00b7 CC BY-SA 2.0"},{"t":"/images/agut_2.webp","p":"https://commons.wikimedia.org/wiki/File:Agave_utahensis_29.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"}],"ecgr":[{"t":"/images/ecgr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Caryophyllales_-_Kroenleinia_grusonii_1.jpg","c":"Em\u0151ke D\u00e9nes \u00b7 CC BY-SA 4.0"},{"t":"/images/ecgr_1.webp","p":"https://commons.wikimedia.org/wiki/File:Caryophyllales_-_Kroenleinia_grusonii_10.jpg","c":"Em\u0151ke D\u00e9nes \u00b7 CC BY-SA 4.0"},{"t":"/images/ecgr_2.webp","p":"https://commons.wikimedia.org/wiki/File:Mexican_Barrel_Cactus_(7499869554).jpg","c":"Rod Waddington \u00b7 CC BY-SA 2.0"}],"hepa":[{"t":"/images/hepa_0.webp","p":"https://commons.wikimedia.org/wiki/File:Hesperaloe_parviflora_0zz.jpg","c":"David J. Stang \u00b7 CC BY-SA 4.0"},{"t":"/images/hepa_1.webp","p":"https://commons.wikimedia.org/wiki/File:Hesperaloe_parviflora_1zz.jpg","c":"David J. Stang \u00b7 CC BY-SA 4.0"},{"t":"/images/hepa_2.webp","p":"https://commons.wikimedia.org/wiki/File:Hesperaloe_parviflora_-_Zilker_Botanical_Garden_-_Austin,_Texas_-_DSC08733.jpg","c":"Daderot \u00b7 CC0"}],"latr":[{"t":"/images/latr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Larrea_tridentata_Anza-Borrego.jpg","c":"Adbar \u00b7 CC BY-SA 3.0"},{"t":"/images/latr_1.webp","p":"https://commons.wikimedia.org/wiki/File:Larrea_tridentata_Furnace_Creek.jpg","c":"Eric in SF \u00b7 CC BY-SA 3.0"},{"t":"/images/latr_2.webp","p":"https://commons.wikimedia.org/wiki/File:Larrea_tridentata_2018-04-07_Death_Valley_Furnace_Creek_Visitor_Center_01.jpg","c":"Agnieszka Kwiecie\u0144, Nova \u00b7 CC BY-SA 4.0"}],"enfa":[{"t":"/images/enfa_0.webp","p":"https://commons.wikimedia.org/wiki/File:Encelia_farinosa_form.jpg","c":"Wikimedia Commons \u00b7 CC BY-SA 3.0"},{"t":"/images/enfa_1.webp","p":"https://commons.wikimedia.org/wiki/File:Encelia_farinosa_2005-02-20.jpg","c":"Curtis Clark \u00b7 CC BY-SA 2.5"}],"fapa":[{"t":"/images/fapa_0.webp","p":"https://commons.wikimedia.org/wiki/File:Fallugia_paradoxa_form.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/fapa_1.webp","p":"https://commons.wikimedia.org/wiki/File:Fallugia_paradoxa_2004-08-22.jpg","c":"Curtis Clark \u00b7 CC BY-SA 2.5"},{"t":"/images/fapa_2.webp","p":"https://commons.wikimedia.org/wiki/File:Fallugia_paradoxa_2005-10-12.jpg","c":"Curtis Clark \u00b7 CC BY-SA 2.5"}],"epne":[{"t":"/images/epne_0.webp","p":"https://commons.wikimedia.org/wiki/File:Ephedra-nevadensis-cones.jpg","c":"Joe Decruyenaere \u00b7 CC BY-SA 2.0"}],"epvi":[{"t":"/images/epvi_0.webp","p":"https://commons.wikimedia.org/wiki/File:Indian_tea,_Ephedra_viridis,_male_plant_(16665844496).jpg","c":"Jim Morefield \u00b7 CC BY-SA 2.0"}],"cora":[{"t":"/images/cora_0.webp","p":"https://commons.wikimedia.org/wiki/File:Coleogyne_ramosissima_form.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/cora_1.webp","p":"https://commons.wikimedia.org/wiki/File:Coleogyne_ramosissima_flowers.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/cora_2.webp","p":"https://commons.wikimedia.org/wiki/File:Blackbrush,_Coleogyne_ramosissima_(31321541030).jpg","c":"Jim Morefield \u00b7 CC BY-SA 2.0"}],"amdu":[{"t":"/images/amdu_0.webp","p":"https://commons.wikimedia.org/wiki/File:Ambrosia_dumosa_2.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/amdu_1.webp","p":"https://commons.wikimedia.org/wiki/File:Ambrosia_dumosa_3.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/amdu_2.webp","p":"https://commons.wikimedia.org/wiki/File:Ambrosia_dumosa_1c.JPG","c":"Consultaplantas \u00b7 CC BY-SA 4.0"}],"sado":[{"t":"/images/sado_0.webp","p":"https://commons.wikimedia.org/wiki/File:Salvia_dorrii_4.jpg","c":"Wikimedia Commons \u00b7 CC BY-SA 3.0"},{"t":"/images/sado_1.webp","p":"https://commons.wikimedia.org/wiki/File:Salvia_dorrii_close.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/sado_2.webp","p":"https://commons.wikimedia.org/wiki/File:Salvia_dorrii_8117.JPG","c":"Walter Siegmund \u00b7 CC BY-SA 4.0"}],"atca":[{"t":"/images/atca_0.webp","p":"https://commons.wikimedia.org/wiki/File:Atriplex_canescens_(8148180299).jpg","c":"Matt Lavin \u00b7 CC BY-SA 2.0"},{"t":"/images/atca_1.webp","p":"https://commons.wikimedia.org/wiki/File:Atriplex_canescens_var_canescens_2.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/atca_2.webp","p":"https://commons.wikimedia.org/wiki/File:Atriplex_canescens_var_canescens_4.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"}],"psfr":[{"t":"/images/psfr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Psorothamnus_fremontii_-_Indigo_Bush_(8953766624).jpg","c":"BLM Nevada \u00b7 CC BY-SA 2.0"},{"t":"/images/psfr_1.webp","p":"https://commons.wikimedia.org/wiki/File:Psorothamnus_fremontii_1.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/psfr_2.webp","p":"https://commons.wikimedia.org/wiki/File:Psorothamnus_fremontii_5.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"}],"lefr":[{"t":"/images/lefr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Leucophyllum_frutescens_(Purple_Sage)_W_IMG_1125.jpg","c":"J.M.Garg \u00b7 CC BY 3.0"},{"t":"/images/lefr_1.webp","p":"https://commons.wikimedia.org/wiki/File:Purple_Sage_(Leucophyllum_frutescens)_2.jpg","c":"Mokkie \u00b7 CC BY-SA 3.0"},{"t":"/images/lefr_2.webp","p":"https://commons.wikimedia.org/wiki/File:Starr-120522-6668-Leucophyllum_frutescens-flowers_and_leaves-Iao_Tropical_Gardens_of_Maui-Maui_(25025826932).jpg","c":"Forest and Kim Starr \u00b7 CC BY 3.0 us"}],"pepa":[{"t":"/images/pepa_0.webp","p":"https://commons.wikimedia.org/wiki/File:%E9%87%A3%E9%90%98%E6%9F%B3%E5%B1%AC_Penstemon_palmeri_-%E8%8F%AF%E6%B2%99%E5%A4%A7%E5%AD%B8%E6%A4%8D%E7%89%A9%E5%9C%92_Warsaw_University_Botanic_Garden-_(35532549284).jpg","c":"\u963f\u6a4b HQ \u00b7 CC BY-SA 2.0"}],"peea":[{"t":"/images/peea_0.webp","p":"https://commons.wikimedia.org/wiki/File:Penstemon_eatonii_-_firecracker_penstemon_-_51220511691.jpg","c":"Matt Lavin \u00b7 CC BY-SA 2.0"},{"t":"/images/peea_1.webp","p":"https://commons.wikimedia.org/wiki/File:Penstemon_eatonii_-_5143723837.jpg","c":"Matt Lavin \u00b7 CC BY-SA 2.0"},{"t":"/images/peea_2.webp","p":"https://commons.wikimedia.org/wiki/File:Penstemon_eatonii_(firecracker_beardtongue)_(Deer_Creek_Canyon,_Utah,_USA)_(15147322834).jpg","c":"James St. John \u00b7 CC BY 2.0"}],"spam":[{"t":"/images/spam_0.webp","p":"https://commons.wikimedia.org/wiki/File:Sphaeralcea_ambigua_2018-04-11_Gold_Butte_National_Monument_01.jpg","c":"Agnieszka Kwiecie\u0144, Nova \u00b7 CC BY-SA 4.0"},{"t":"/images/spam_1.webp","p":"https://commons.wikimedia.org/wiki/File:Sphaeralcea_ambigua_2018-04-11_Gold_Butte_National_Monument_02.jpg","c":"Agnieszka Kwiecie\u0144, Nova \u00b7 CC BY-SA 4.0"},{"t":"/images/spam_2.webp","p":"https://commons.wikimedia.org/wiki/File:Sphaeralcea_ambigua_20050411_36.26065_117.21721_1075_DVNP-WildroseCnyn_01.jpg","c":"Lblakely \u00b7 CC BY-SA 4.0"}],"bamu":[{"t":"/images/bamu_0.webp","p":"https://commons.wikimedia.org/wiki/File:Baileya_multiradiata_flower_1.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/bamu_1.webp","p":"https://commons.wikimedia.org/wiki/File:Baileya_multiradiata_head_2003-07-03.jpg","c":"Curtis Clark \u00b7 CC BY-SA 2.5"},{"t":"/images/bamu_2.webp","p":"https://commons.wikimedia.org/wiki/File:Baileya-multiradiata-20080325.JPG","c":"Miwasatoshi \u00b7 CC BY-SA 4.0"}],"psco":[{"t":"/images/psco_0.webp","p":"https://commons.wikimedia.org/wiki/File:Psilostrophe_cooperi_2.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/psco_1.webp","p":"https://commons.wikimedia.org/wiki/File:Psilostrophe_cooperi_3.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"},{"t":"/images/psco_2.webp","p":"https://commons.wikimedia.org/wiki/File:Psilostrophe_cooperi_5.jpg","c":"Stan Shebs \u00b7 CC BY-SA 3.0"}],"mimu":[{"t":"/images/mimu_0.webp","p":"https://commons.wikimedia.org/wiki/File:Mirabilis_multiflora_-_Flickr_-_aspidoscelis_(1).jpg","c":"Patrick Alexander \u00b7 CC0"}],"kean":[{"t":"/images/kean_0.webp","p":"https://commons.wikimedia.org/wiki/File:Keckiellaantirrhinoides.jpg","c":"Stickpen \u00b7 Public domain"}],"juca":[{"t":"/images/juca_0.webp","p":"https://commons.wikimedia.org/wiki/File:Justicia_californica_on_the_rocks.jpg","c":"Ciar \u00b7 Public domain"}],"achy":[{"t":"/images/achy_0.webp","p":"https://commons.wikimedia.org/wiki/File:Achnatherum_hymenoides-5-19-05.jpg","c":"Thayne Tuason \u00b7 CC BY-SA 4.0"},{"t":"/images/achy_1.webp","p":"https://commons.wikimedia.org/wiki/File:Oryzopsis_hymenoides_(Indian_ricegrass)_1_(24096328555).jpg","c":"James St. John \u00b7 CC BY 2.0"},{"t":"/images/achy_2.webp","p":"https://commons.wikimedia.org/wiki/File:Achnatherum_hymenoides_-_Ricegrass.jpg","c":"NRCS \u00b7 Public domain"}],"plri":[{"t":"/images/plri_0.webp","p":"https://commons.wikimedia.org/wiki/File:Joshua_Tree_National_Park_-_Big_Galleta_Grass_(Pleuraphis_rigida).JPG","c":"Daniel Mayer (mav) \u00b7 CC BY-SA 3.0"}],"acsp":[{"t":"/images/acsp_0.webp","p":"https://commons.wikimedia.org/wiki/File:Achnatherum_speciosum.jpg","c":"Stickpen \u00b7 CC0"},{"t":"/images/acsp_1.webp","p":"https://commons.wikimedia.org/wiki/File:Stipa_speciosa_-_desert_stipa.jpg","c":"Matt Lavin \u00b7 CC BY-SA 2.0"},{"t":"/images/acsp_2.webp","p":"https://commons.wikimedia.org/wiki/File:Stipa_speciosa_(Achnatherum_speciosum)_(20221718348).jpg","c":"Matt Lavin \u00b7 CC BY-SA 2.0"}],"mupo":[{"t":"/images/mupo_0.webp","p":"https://commons.wikimedia.org/wiki/File:Muhlenbergia_porteri_-_Flickr_-_aspidoscelis_(3).jpg","c":"Patrick Alexander \u00b7 CC0"},{"t":"/images/mupo_1.webp","p":"https://commons.wikimedia.org/wiki/File:Muhlenbergia_porteri_-_Flickr_-_aspidoscelis.jpg","c":"Patrick Alexander \u00b7 CC0"},{"t":"/images/mupo_2.webp","p":"https://commons.wikimedia.org/wiki/File:Bush_muhly,_Muhlenbergia_porteri_(15522621647).jpg","c":"Jim Morefield \u00b7 CC BY-SA 2.0"}],"bogr":[{"t":"/images/bogr_0.webp","p":"https://commons.wikimedia.org/wiki/File:Blue_grama_Bouteloua_gracilis_MN_2007.JPG","c":"SEWilco \u00b7 CC BY-SA 3.0"},{"t":"/images/bogr_1.webp","p":"https://commons.wikimedia.org/wiki/File:2016-08-27-14.12.48_ZS_PMax_Bouteloua_gracilis-1_(29196215791).jpg","c":"John Rusk \u00b7 CC BY 2.0"}]};
+
+/* ── State ───────────────────────────────────────────────── */
+const KEY="mojave-yard:review-v2";
+let S={verdicts:{},notes:{},by:{},noticeOff:false};
+let filt={strat:null,native:false,unrated:false,q:""};
+const gal={};
+
+let ME=null, CAN_WRITE=false;
+const CACHE="mojave-yard:cache-v1";
+
+async function load(){
+  try{
+    const r=await fetch("/api/state",{credentials:"same-origin"});
+    if(!r.ok)throw new Error("state "+r.status);
+    const d=await r.json();
+    S.verdicts=d.verdicts||{};S.notes=d.notes||{};S.by=d.by||{};
+    ME=d.user||null;CAN_WRITE=!!d.canWrite;
+    try{localStorage.setItem(CACHE,JSON.stringify({verdicts:S.verdicts,notes:S.notes,by:S.by}))}catch(e){}
+  }catch(e){
+    // offline or server down: fall back to the last snapshot we saw
+    try{const c=JSON.parse(localStorage.getItem(CACHE)||"null");
+      if(c){S.verdicts=c.verdicts||{};S.notes=c.notes||{};S.by=c.by||{}}}catch(_){}
+  }
+  try{S.noticeOff=localStorage.getItem("mojave-yard:notice")==="off"}catch(e){}
+}
+
+const dirty=new Set(); let saveT;
+function save(id){
+  if(id)dirty.add(id);
+  clearTimeout(saveT);
+  saveT=setTimeout(flush,350);
+}
+async function flush(){
+  const ids=[...dirty];dirty.clear();
+  for(const id of ids){
+    try{
+      const r=await fetch("/api/plants/"+encodeURIComponent(id),{
+        method:"PUT",credentials:"same-origin",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({verdict:S.verdicts[id]||"",note:S.notes[id]||""})});
+      if(r.status===401){CAN_WRITE=false;drawWhoami();drawSheets();return}
+      if(r.ok){const d=await r.json();if(d&&d.by){S.by[id]=d.by}}
+    }catch(e){dirty.add(id)}
+  }
+  try{localStorage.setItem(CACHE,JSON.stringify({verdicts:S.verdicts,notes:S.notes,by:S.by}))}catch(e){}
+}
+
+function drawWhoami(){
+  const el=document.getElementById("whoami");
+  if(!el)return;
+  if(ME){
+    el.innerHTML=(ME.avatar?`<img src="${esc(ME.avatar)}" alt="">`:"")+
+      `<span>Signed in as ${esc(ME.login)}</span>`+
+      (CAN_WRITE?"":`<span class="ro">· read-only</span>`)+
+      `<a href="/auth/logout">Sign out</a>`;
+  }else{
+    el.innerHTML=`<span>Browsing read-only</span><a href="/auth/login">Sign in with GitHub to stamp</a>`;
+  }
+}
+
+/* ── Photos ──────────────────────────────────────────────
+   Real Wikimedia Commons URLs, hardcoded. No network lookup to be
+   blocked; a URL that 404s is dropped and we fall back to the drawing. */
+function initGal(id){
+  return {imgs:(PHOTOS[id]||[]).slice(),i:0,dead:{}};
+}
+function liveImgs(g){return g.imgs.filter((_,i)=>!g.dead[i])}
+
+/* ── Render ──────────────────────────────────────────────── */
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const stratName=k=>(STRATA.find(x=>x[0]===k)||["",""])[1];
+const commonsURL=p=>"https://commons.wikimedia.org/w/index.php?search="+encodeURIComponent(p.q)+"&title=Special:MediaSearch&type=image";
+const googleURL=p=>"https://www.google.com/search?tbm=isch&q="+encodeURIComponent(p.b+" "+p.n+" plant");
+
+function visible(){
+  const q=filt.q.trim().toLowerCase();
+  return P.filter(p=>{
+    if(filt.strat&&p.s!==filt.strat)return false;
+    if(filt.native&&!p.nat)return false;
+    if(filt.unrated&&S.verdicts[p.id])return false;
+    if(q){const hay=(p.n+" "+p.b+" "+p.f+" "+p.why+" "+p.care+" "+stratName(p.s)).toLowerCase();
+      if(!hay.includes(q))return false}
+    return true;
+  });
+}
+function drawStrata(){
+  const rows=[["","All layers"]].concat(STRATA);
+  document.getElementById("strata").innerHTML=rows.map(function(row){
+    const k=row[0],lab=row[1],ct=k?P.filter(p=>p.s===k).length:P.length,on=(filt.strat||"")===k;
+    return `<button class="stratum" data-strat="${k}" aria-pressed="${on}">
+      <span class="bar" style="width:${k?Math.round(8+ct*1.2):22}px"></span>
+      <span><span class="nm">${lab}</span> <span class="ct">${ct}</span></span></button>`}).join("");
+}
+function plateHTML(p){
+  const g=gal[p.id],cu=commonsURL(p),gi=googleURL(p),live=liveImgs(g);
+  if(live.length){
+    const idx=Math.min(g.i,live.length-1),im=live[idx],realIndex=g.imgs.indexOf(im);
+    return `<div class="frame">
+        <img src="${esc(im.t)}" loading="lazy" decoding="async" alt="${esc(p.n)} — photograph ${idx+1} of ${live.length}"
+             onload="this.classList.add('ready')" onerror="photoFailed('${p.id}',${realIndex})">
+        ${live.length>1?`<div class="nav">
+          <button data-step="-1" data-id="${p.id}" aria-label="Previous photo of ${esc(p.n)}">‹</button>
+          <button data-step="1" data-id="${p.id}" aria-label="Next photo of ${esc(p.n)}">›</button></div>`:""}
+      </div>
+      ${live.length>1?`<div class="dots">${live.map((_,i)=>`<i class="${i===idx?"on":""}"></i>`).join("")}</div>`:""}
+      <div class="platebar"><span class="grow" title="${esc(im.c)}">${idx+1} of ${live.length} · ${esc(im.c)}</span>
+        <a href="${gi}" target="_blank" rel="noopener" title="Google image search for ${esc(p.b)}">More photos ↗</a>
+        <a href="${esc(im.p)}" target="_blank" rel="noopener">Source ↗</a></div>`;
+  }
+  const broke=g.imgs.length>0;
+  return `<div class="empty">
+      <span class="lead">${broke?"Photo didn’t load":"No Commons photograph"}</span>
+      <p>${broke
+          ? "The file for this species has moved or been renamed since I built this. Search it instead:"
+          : "Wikimedia has no usable photograph filed for this species. Search it instead:"}</p>
+      <a class="lookup" href="${gi}" target="_blank" rel="noopener">Image search ↗</a>
+      <a class="lookup alt" href="${cu}" target="_blank" rel="noopener">Wikimedia Commons ↗</a>
+    </div>
+    <div class="platebar"><span class="grow">${esc(p.b)}</span></div>`;
+}
+function photoFailed(id,idx){
+  const g=gal[id];if(!g)return;
+  g.dead[idx]=true;g.i=0;paint(id);
+}
+window.photoFailed=photoFailed;
+function sheetHTML(p){
+  const v=S.verdicts[p.id]||"",note=S.notes[p.id]||"";
+  return `<article class="sheet ${v==="no"?"is-pass":""} ${CAN_WRITE?"":"readonly"}" id="s-${p.id}">
+    <div class="plate" data-plate="${p.id}">${plateHTML(p)}</div>
+    <div class="info">
+      <div class="badges"><span class="badge">${esc(stratName(p.s))}</span>
+        ${p.nat?`<span class="badge native">NV native</span>`:`<span class="badge adapted">Adapted, not native</span>`}
+        ${p.star?`<span class="badge star">${esc(p.star)}</span>`:""}</div>
+      <h2>${esc(p.n)}</h2>
+      <div class="binomial">${esc(p.b)}</div>
+      <dl class="facts">
+        <div><dt>Mature size</dt><dd>${esc(p.h)}</dd></div>
+        <div><dt>Flower</dt><dd>${esc(p.f)}</dd></div>
+        <div><dt>Water, established</dt><dd>${esc(p.w)}</dd></div>
+      </dl>
+      <p class="why">${esc(p.why)}</p>
+      <p class="why" style="color:#9E97B4"><span class="badge care">Watch for</span> ${esc(p.care)}</p>
+      <div class="verdicts">
+        <button class="stamp yes"   data-v="yes"   data-id="${p.id}" aria-pressed="${v==="yes"}">Plant it</button>
+        <button class="stamp maybe" data-v="maybe" data-id="${p.id}" aria-pressed="${v==="maybe"}">Maybe</button>
+        <button class="stamp no"    data-v="no"    data-id="${p.id}" aria-pressed="${v==="no"}">Pass</button>
+        <button class="notebtn" data-note="${p.id}">${note?"Edit note":"Add note"}</button>
+      </div>
+      <textarea class="note" data-nid="${p.id}" placeholder="What you two said about it…" ${note?"":"hidden"}>${esc(note)}</textarea>
+    </div></article>`;
+}
+function drawSheets(){
+  const list=visible(),el=document.getElementById("sheets");
+  if(!list.length){el.innerHTML=`<div class="blank"><strong>Nothing matches those filters.</strong>Clear the search or pick another layer.</div>`;return}
+  list.forEach(p=>{if(!gal[p.id])gal[p.id]=initGal(p.id)});
+  el.innerHTML=list.map(sheetHTML).join("");
+  observe();
+}
+function paint(id){
+  const holder=document.querySelector('[data-plate="'+id+'"]');
+  if(!holder)return;
+  holder.innerHTML=plateHTML(P.find(x=>x.id===id));
+}
+function observe(){}
+function drawTally(){
+  const c={yes:0,maybe:0,no:0};
+  Object.values(S.verdicts).forEach(v=>{if(c[v]!==undefined)c[v]++});
+  document.getElementById("t-yes").textContent=c.yes;
+  document.getElementById("t-maybe").textContent=c.maybe;
+  document.getElementById("t-no").textContent=c.no;
+  document.getElementById("t-none").textContent=P.length-c.yes-c.maybe-c.no;
+}
+function drawList(){
+  const yes=P.filter(p=>S.verdicts[p.id]==="yes"),maybe=P.filter(p=>S.verdicts[p.id]==="maybe");
+  const el=document.getElementById("list");
+  if(!yes.length&&!maybe.length){
+    el.innerHTML=`<div class="blank" style="margin-top:34px"><strong>The shortlist is empty.</strong>Stamp a few plants in Browse and they'll collect here — grouped by layer, ready for the nursery.</div>`;return}
+  const sec=(title,rows,cls)=>rows.length?`
+    <div class="list-head" style="margin-top:34px"><h2>${title}</h2>
+      <span class="eyebrow">${rows.length} plant${rows.length>1?"s":""}</span></div>
+    ${rows.map(p=>`<div class="row ${cls}"><span class="mark"></span>
+      <div><div class="nm">${esc(p.n)}</div><div class="bn">${esc(p.b)}</div>
+        ${S.notes[p.id]?`<div class="mt">${esc(S.notes[p.id])}</div>`:""}
+        ${S.by[p.id]?`<div class="mt" style="opacity:.65">— ${esc(S.by[p.id])}</div>`:""}</div>
+      <span class="strat">${esc(stratName(p.s))}${p.nat?"":" · adapted"}</span></div>`).join("")}`:"";
+  el.innerHTML=`<div class="list-head" style="margin-top:30px">
+      <h2 style="font-size:30px">Shortlist</h2><button class="chip" id="copy">Copy as text</button></div>
+    ${sec("Plant it",yes,"")}${sec("Maybe",maybe,"maybe")}`;
+  const cp=document.getElementById("copy");
+  if(cp)cp.onclick=()=>{
+    const fmt=(t,rows)=>rows.length?t+"\n"+rows.map(p=>"- "+p.n+" ("+p.b+") — "+stratName(p.s)+(S.notes[p.id]?" — "+S.notes[p.id]:"")).join("\n")+"\n\n":"";
+    const txt="MOJAVE FRONT YARD — SHORTLIST\n\n"+fmt("PLANT IT",yes)+fmt("MAYBE",maybe);
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(
+        ()=>{cp.textContent="Copied";setTimeout(()=>cp.textContent="Copy as text",1600)},
+        ()=>{cp.textContent="Select and copy manually"});
+    }else cp.textContent="Select and copy manually";
+  };
+}
+
+/* ── Events ──────────────────────────────────────────────── */
+document.addEventListener("click",e=>{
+  const st=e.target.closest("[data-strat]");
+  if(st){filt.strat=st.dataset.strat||null;drawStrata();drawSheets();return}
+
+  const v=e.target.closest("[data-v]");
+  if(v){const id=v.dataset.id;
+    S.verdicts[id]=S.verdicts[id]===v.dataset.v?undefined:v.dataset.v;
+    if(!S.verdicts[id])delete S.verdicts[id];
+    save(id);drawTally();
+    const sheet=document.getElementById("s-"+id);
+    sheet.querySelectorAll("[data-v]").forEach(b=>b.setAttribute("aria-pressed",String(S.verdicts[id]===b.dataset.v)));
+    sheet.classList.toggle("is-pass",S.verdicts[id]==="no");
+    if(filt.unrated)setTimeout(drawSheets,420);
+    return}
+
+  const nb=e.target.closest("[data-note]");
+  if(nb){const ta=document.querySelector('[data-nid="'+nb.dataset.note+'"]');
+    ta.hidden=!ta.hidden;if(!ta.hidden)ta.focus();return}
+
+  const step=e.target.closest("[data-step]");
+  if(step){const g=gal[step.dataset.id],L=liveImgs(g).length;
+    if(L)g.i=(g.i+Number(step.dataset.step)+L)%L;
+    paint(step.dataset.id);return}
+});
+document.addEventListener("input",e=>{
+  if(e.target.dataset.nid){
+    S.notes[e.target.dataset.nid]=e.target.value;
+    if(!e.target.value)delete S.notes[e.target.dataset.nid];
+    save(e.target.dataset.nid)}
+});
+document.getElementById("q").addEventListener("input",e=>{filt.q=e.target.value;drawSheets()});
+function toggle(id,key){const b=document.getElementById(id);
+  b.onclick=()=>{filt[key]=!filt[key];b.setAttribute("aria-pressed",String(filt[key]));drawSheets()}}
+toggle("f-native","native");toggle("f-rated","unrated");
+
+const vb=document.getElementById("v-browse"),vl=document.getElementById("v-list");
+function view(which){const browsing=which==="browse";
+  vb.setAttribute("aria-pressed",String(browsing));vl.setAttribute("aria-pressed",String(!browsing));
+  document.getElementById("browse").hidden=!browsing;document.getElementById("list").hidden=browsing;
+  browsing?drawSheets():drawList()}
+vb.onclick=()=>view("browse");vl.onclick=()=>view("list");
+
+document.getElementById("dismiss").onclick=()=>{
+  S.noticeOff=true;try{localStorage.setItem("mojave-yard:notice","off")}catch(e){}
+  document.getElementById("notice").hidden=true};
+
+document.addEventListener("keydown",e=>{
+  if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;
+  const sheet=document.activeElement&&document.activeElement.closest(".sheet");
+  if(!sheet)return;
+  const id=sheet.id.slice(2),g=gal[id];
+  if(!g)return;
+  const L=liveImgs(g).length;if(L<2)return;
+  g.i=(g.i+(e.key==="ArrowRight"?1:-1)+L)%L;paint(id);
+});
+
+/* ── Boot ────────────────────────────────────────────────── */
+(async()=>{
+  await load();
+  if(S.noticeOff)document.getElementById("notice").hidden=true;
+  drawWhoami();drawStrata();drawSheets();drawTally();
+})();
+</script>

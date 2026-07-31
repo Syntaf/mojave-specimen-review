@@ -1,0 +1,88 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mojave.fullname" . }}
+  labels: {{- include "mojave.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  # A single RWO block volume cannot be attached to old and new pods at once,
+  # so a rolling update would deadlock. Recreate accepts a few seconds of
+  # downtime instead of hanging the rollout.
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels: {{- include "mojave.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels: {{- include "mojave.selectorLabels" . | nindent 8 }}
+      annotations:
+        # Roll the pod when auth config changes, so a secret edit takes effect.
+        checksum/secret: {{ include (print $.Template.BasePath "/secret.yaml") . | sha256sum }}
+    spec:
+      {{- with .Values.nodeSelector }}
+      nodeSelector: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        # distroless nonroot is uid 65532; fsGroup makes the PVC writable by it.
+        runAsNonRoot: true
+        runAsUser: 65532
+        fsGroup: 65532
+      containers:
+        - name: server
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.targetPort }}
+          env:
+            - name: ADDR
+              value: ":{{ .Values.service.targetPort }}"
+            - name: DB_PATH
+              value: "{{ .Values.persistence.mountPath }}/mojave.db"
+            - name: BASE_URL
+              value: {{ .Values.auth.baseURL | quote }}
+            - name: ALLOWED_USERS
+              value: {{ .Values.auth.allowedUsers | quote }}
+            - name: GITHUB_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mojave.fullname" . }}-auth
+                  key: github-client-id
+                  optional: true
+            - name: GITHUB_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mojave.fullname" . }}-auth
+                  key: github-client-secret
+                  optional: true
+            - name: SESSION_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mojave.fullname" . }}-auth
+                  key: session-key
+                  optional: true
+          readinessProbe:
+            httpGet: {path: /healthz, port: http}
+            initialDelaySeconds: 2
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /healthz, port: http}
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          {{- if .Values.persistence.enabled }}
+          volumeMounts:
+            - name: data
+              mountPath: {{ .Values.persistence.mountPath }}
+          {{- end }}
+      {{- if .Values.persistence.enabled }}
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: {{ include "mojave.fullname" . }}-data
+      {{- end }}

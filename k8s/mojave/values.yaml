@@ -1,0 +1,53 @@
+# This chart deploys ONLY the app. The ingress controller, external-dns and the
+# cert-manager Issuer it relies on are owned by the dnd-dashboard release in the
+# same namespace — see README.md "Why the dnd namespace".
+image:
+  repository: syntaf/mojave-specimen-review
+  tag: ""            # defaults to .Chart.AppVersion; CI passes the git SHA
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+service:
+  port: 80
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  host: nv.mbolt.app
+  # Must match the controller that already serves mbolt.app. That controller
+  # runs with -watch-namespace=dnd, so this release has to live in `dnd`.
+  className: dnd-nginx
+  # Namespaced Issuer owned by the dnd release; there are no ClusterIssuers.
+  issuer: letsencrypt-prod-dnd
+  # Distinct from dnd-cert, or the two releases fight over one secret.
+  tlsSecret: nv-mbolt-cert
+
+persistence:
+  enabled: true
+  size: 1Gi
+  storageClass: do-block-storage
+  mountPath: /data
+
+auth:
+  # Comma-separated GitHub logins allowed to stamp. Empty means any GitHub
+  # account may write, which you almost certainly do not want in public.
+  allowedUsers: "Syntaf"
+  baseURL: "https://nv.mbolt.app"
+
+# Injected by CI with --set; never commit real values.
+secrets:
+  githubClientId: ""
+  githubClientSecret: ""
+  sessionKey: ""
+
+# Every other workload on this cluster is pinned to the primary pool.
+nodeSelector:
+  doks.digitalocean.com/node-pool: primary
+
+resources:
+  requests:
+    cpu: 10m
+    memory: 32Mi
+  limits:
+    memory: 128Mi

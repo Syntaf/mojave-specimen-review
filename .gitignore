@@ -1,0 +1,7 @@
+/mojave-server
+/data/
+*.db
+*.db-wal
+*.db-shm
+k8s/*/secrets.yaml
+.DS_Store

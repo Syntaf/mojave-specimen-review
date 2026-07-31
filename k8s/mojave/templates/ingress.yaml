@@ -1,0 +1,29 @@
+{{- if .Values.ingress.enabled }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "mojave.fullname" . }}
+  labels: {{- include "mojave.labels" . | nindent 4 }}
+  annotations:
+    # external-dns (running in this namespace, watching cluster-wide with
+    # --domain-filter=mbolt.app) creates the DO A/AAAA records from this.
+    external-dns.alpha.kubernetes.io/hostname: {{ .Values.ingress.host }}
+    cert-manager.io/issuer: {{ .Values.ingress.issuer }}
+spec:
+  ingressClassName: {{ .Values.ingress.className }}
+  tls:
+    - hosts:
+        - {{ .Values.ingress.host }}
+      secretName: {{ .Values.ingress.tlsSecret }}
+  rules:
+    - host: {{ .Values.ingress.host }}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "mojave.fullname" . }}
+                port:
+                  number: {{ .Values.service.port }}
+{{- end }}
