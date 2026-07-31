@@ -1,0 +1,12 @@
+# Fast local path: package an already-cross-compiled binary.
+#   GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o dist/server .
+#   docker build -f Dockerfile.prebuilt --platform linux/amd64 -t <tag> .
+# CI uses the multi-stage Dockerfile instead; building amd64 on an arm64 Mac
+# through QEMU takes over ten minutes, while cross-compiling takes five seconds.
+FROM --platform=linux/amd64 gcr.io/distroless/static-debian12:nonroot
+COPY dist/server /server
+ENV ADDR=:8080 \
+    DB_PATH=/data/mojave.db
+EXPOSE 8080
+USER nonroot:nonroot
+ENTRYPOINT ["/server"]
