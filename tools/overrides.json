@@ -1,0 +1,35 @@
+{
+ "_comment": "Hand overrides for tools/source_photos.py. synonyms: extra names to search Commons under (old binomials, recent moves). pin: files that always win and go first. exclude: files never to consider, e.g. a nicely named file that turns out to be a macro. Titles are Commons file titles with or without the File: prefix.",
+ "synonyms": {
+  "segr": ["Acacia greggii"],
+  "pimo": ["Single-leaf pinyon", "Singleleaf pinyon", "Pinyon pine"],
+  "pafl": ["Cercidium floridum"],
+  "cere": ["Celtis laevigata var. reticulata"],
+  "oper": ["Opuntia polyacantha var. erinacea"],
+  "ectr": ["Echinocereus mojavensis"],
+  "ecgr": ["Kroenleinia grusonii"],
+  "sado": ["Salvia carnosa"],
+  "kean": ["Penstemon antirrhinoides"],
+  "achy": ["Oryzopsis hymenoides", "Eriocoma hymenoides", "Stipa hymenoides"],
+  "acsp": ["Stipa speciosa", "Jarava speciosa", "Pappostipa speciosa"],
+  "plri": ["Hilaria rigida"]
+ },
+ "pin": {
+  "fapa": ["File:Fallugia_paradoxa_form.jpg"],
+  "pimo": ["File:WhiteMtn_past_pinyonRidge.jpg"],
+  "achy": ["File:Achnatherum_hymenoides-5-19-05.jpg"]
+ },
+ "exclude": {
+  "chli": ["File:Chilopsis_linearis_flower_2.jpg"],
+  "segr": ["File:Catclaw_acacia_(Acacia_greggii);_Wonderland_of_Rocks.jpg"],
+  "latr": ["File:Larrea_tridentata_Furnace_Creek.jpg"],
+  "bamu": ["File:Baileya_multiradiata_flower_1.jpg", "File:Baileya_multiradiata_head_2003-07-03.jpg"],
+  "sado": ["File:Salvia_dorrii_close.jpg"],
+  "hepa": ["File:Hesperaloe_parviflora_0zz.jpg"],
+  "pimo": ["File:Wheeler_flatirons_pastPinyons.jpg", "File:Single-leaf_pinyon_2.jpg"],
+  "cere": ["File:Celtis_reticulata_-_Flickr_-_aspidoscelis.jpg"],
+  "atca": ["File:Atriplex_canescens_var_canescens_4.jpg"],
+  "epne": ["File:Ephedra-nevadensis-cones.jpg"],
+  "prpu": ["File:Prosopis_pubescens_inflorescence_2003-06-02.jpg"]
+ }
+}

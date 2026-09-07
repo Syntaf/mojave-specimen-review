@@ -155,9 +155,18 @@ Variables, and the next push to `main` ships.
 ## Photographs
 
 All photographs come from Wikimedia Commons, resized and re-encoded to WebP.
-`data/photos.json` records, for each image, the Commons file page, photographer
+`tools/photos.json` records, for each image, the Commons file page, photographer
 and licence. Each plate credits its photographer in the UI, and "Source ↗" links
 to the file page for full licence terms.
+
+The lead photo for each species is meant to show the whole plant at a distance
+— what it will actually look like in a yard — with close-ups of flowers or
+fruit only as the second and third shots. `tools/source_photos.py` does the
+sourcing: it searches Commons under each species' category, full-text and old
+synonyms, ranks candidates for whole-plant "habit" shots using both file
+metadata and the image content, and regenerates the manifest and the `PHOTOS`
+constant in `web/index.html`. `make photos` runs it; see `tools/README.md` for
+the review loop and hand overrides.
 
 Every cactus and yucca in this list is a protected species in Nevada — buy
 nursery-grown stock, never dig from wild land.

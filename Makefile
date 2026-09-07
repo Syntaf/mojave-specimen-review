@@ -2,7 +2,7 @@ BINARY := mojave-server
 IMAGE  := syntaf/mojave-specimen-review
 TAG    ?= $(shell git rev-parse HEAD)
 
-.PHONY: run test vet build image deploy clean
+.PHONY: run test vet build image deploy photos clean
 
 ## run: serve locally on :8080, read-only (no OAuth configured)
 run:
@@ -34,6 +34,10 @@ deploy:
 		$(if $(GH_OAUTH_CLIENT_ID),--set secrets.githubClientId=$(GH_OAUTH_CLIENT_ID)) \
 		$(if $(GH_OAUTH_CLIENT_SECRET),--set secrets.githubClientSecret=$(GH_OAUTH_CLIENT_SECRET)) \
 		$(if $(SESSION_KEY),--set secrets.sessionKey=$(SESSION_KEY))
+
+## photos: re-source plant photographs from Wikimedia Commons (needs network + Pillow)
+photos:
+	python3 tools/source_photos.py refresh
 
 clean:
 	rm -f $(BINARY)
