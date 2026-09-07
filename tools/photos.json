@@ -1,0 +1,892 @@
+{
+ "chli": [
+  {
+   "file": "/images/chli_0.webp",
+   "title": "File:Chilopsis Tree 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Chilopsis_Tree_1.jpg",
+   "credit": "Almapayokels · CC0",
+   "kind": "habit",
+   "score": 6.45
+  },
+  {
+   "file": "/images/chli_1.webp",
+   "title": "File:Chilopsis linearis Rio Salado 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Chilopsis_linearis_Rio_Salado_2.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 0.97
+  },
+  {
+   "file": "/images/chli_2.webp",
+   "title": "File:Chilopsis linearis flower 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Chilopsis_linearis_flower_2.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "close-up",
+   "score": -100.82
+  }
+ ],
+ "segr": [
+  {
+   "file": "/images/segr_0.webp",
+   "title": "File:ACACIA, CATCLAW (Acacia greggii) (5-13-11) patagonia lake, scc, az -02 (5716216337).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:ACACIA,_CATCLAW_(Acacia_greggii)_(5-13-11)_patagonia_lake,_scc,_az_-02_(5716216337).jpg",
+   "credit": "ALAN SCHMIERER · CC0",
+   "kind": "habit",
+   "score": 1.22
+  },
+  {
+   "file": "/images/segr_1.webp",
+   "title": "File:Catclaw acacia (Acacia greggii); Wonderland of Rocks.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Catclaw_acacia_(Acacia_greggii);_Wonderland_of_Rocks.jpg",
+   "credit": "Robb Hannawacker · Public domain",
+   "kind": "close-up",
+   "score": -104.09
+  }
+ ],
+ "prpu": [
+  {
+   "file": "/images/prpu_0.webp",
+   "title": "File:Prosopis pubescens inflorescence 2003-06-02.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Prosopis_pubescens_inflorescence_2003-06-02.jpg",
+   "credit": "Curtis Clark · CC BY-SA 2.5"
+  }
+ ],
+ "prgl": [
+  {
+   "file": "/images/prgl_0.webp",
+   "title": "File:Prosopis glandulosa (homeredwardprice) 001.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Prosopis_glandulosa_(homeredwardprice)_001.jpg",
+   "credit": "homeredwardprice · CC BY 2.0",
+   "kind": "habit",
+   "score": 6.0
+  },
+  {
+   "file": "/images/prgl_1.webp",
+   "title": "File:P145 Honey mesquite (Prosopis glandulosa) with mistletoe (Phoradendron tomentosum) (15321664643).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:P145_Honey_mesquite_(Prosopis_glandulosa)_with_mistletoe_(Phoradendron_tomentosum)_(15321664643).jpg",
+   "credit": "Royce Milam · CC BY 2.0",
+   "kind": "habit",
+   "score": 4.0
+  },
+  {
+   "file": "/images/prgl_2.webp",
+   "title": "File:Prosopis glandulosa - 52753465184.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Prosopis_glandulosa_-_52753465184.jpg",
+   "credit": "sonnia hill · CC BY 2.0",
+   "kind": "unclear",
+   "score": -0.01
+  }
+ ],
+ "cere": [
+  {
+   "file": "/images/cere_0.webp",
+   "title": "File:Celtis reticulata - Flickr - aspidoscelis (1).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Celtis_reticulata_-_Flickr_-_aspidoscelis_(1).jpg",
+   "credit": "Patrick Alexander · CC0",
+   "kind": "habit",
+   "score": 0.91
+  },
+  {
+   "file": "/images/cere_1.webp",
+   "title": "File:Celtis laevigata reticulata (3720031807).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Celtis_laevigata_reticulata_(3720031807).jpg",
+   "credit": "Matt Lavin · CC BY-SA 2.0",
+   "kind": "unclear",
+   "score": -0.34
+  },
+  {
+   "file": "/images/cere_2.webp",
+   "title": "File:Celtis reticulata - Flickr - aspidoscelis.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Celtis_reticulata_-_Flickr_-_aspidoscelis.jpg",
+   "credit": "Patrick Alexander · CC0",
+   "kind": "unclear",
+   "score": -100.66
+  }
+ ],
+ "pimo": [
+  {
+   "file": "/images/pimo_0.webp",
+   "title": "File:WhiteMtn past pinyonRidge.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:WhiteMtn_past_pinyonRidge.jpg",
+   "credit": "Jane S. Richardson · CC BY 3.0",
+   "kind": "habit",
+   "score": 106.0
+  },
+  {
+   "file": "/images/pimo_1.webp",
+   "title": "File:Wheeler flatirons pastPinyons.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Wheeler_flatirons_pastPinyons.jpg",
+   "credit": "Dcrjsr · CC BY 3.0",
+   "kind": "habit",
+   "score": -94.0
+  },
+  {
+   "file": "/images/pimo_2.webp",
+   "title": "File:Single-leaf pinyon 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Single-leaf_pinyon_2.jpg",
+   "credit": "Toiyab · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": -95.32
+  }
+ ],
+ "pafl": [
+  {
+   "file": "/images/pafl_0.webp",
+   "title": "File:Blooming palo verde trees in west Aravaipa Canyon (54820903676).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Blooming_palo_verde_trees_in_west_Aravaipa_Canyon_(54820903676).jpg",
+   "credit": "BLMArizona · Public domain"
+  }
+ ],
+ "yubr": [
+  {
+   "file": "/images/yubr_0.webp",
+   "title": "File:Joshua Trees Yucca brevifolia in Joshua Tree National Park.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Joshua_Trees_Yucca_brevifolia_in_Joshua_Tree_National_Park.jpg",
+   "credit": "Brocken Inaglory · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 6.25
+  },
+  {
+   "file": "/images/yubr_1.webp",
+   "title": "File:Yucca brevifolia 0zz.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Yucca_brevifolia_0zz.jpg",
+   "credit": "David J. Stang · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 2.48
+  }
+ ],
+ "yusc": [
+  {
+   "file": "/images/yusc_0.webp",
+   "title": "File:Mojave yucca to one side with desert behind.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mojave_yucca_to_one_side_with_desert_behind.jpg",
+   "credit": "Ryan Hagerty · Public domain",
+   "kind": "habit",
+   "score": 7.76
+  },
+  {
+   "file": "/images/yusc_1.webp",
+   "title": "File:2012.09.09.103159 Yucca schidigera Red Rock Canyon Nevada.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:2012.09.09.103159_Yucca_schidigera_Red_Rock_Canyon_Nevada.jpg",
+   "credit": "Hermann Luyken · CC0",
+   "kind": "habit",
+   "score": 6.41
+  },
+  {
+   "file": "/images/yusc_2.webp",
+   "title": "File:Starr 071221-0140 Yucca schidigera.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Starr_071221-0140_Yucca_schidigera.jpg",
+   "credit": "Forest & Kim Starr · CC BY 3.0",
+   "kind": "habit",
+   "score": 5.99
+  }
+ ],
+ "yuba": [
+  {
+   "file": "/images/yuba_0.webp",
+   "title": "File:Starr 071222-0320 Yucca baccata.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Starr_071222-0320_Yucca_baccata.jpg",
+   "credit": "Forest & Kim Starr · CC BY 3.0",
+   "kind": "habit",
+   "score": 6.0
+  },
+  {
+   "file": "/images/yuba_1.webp",
+   "title": "File:Red rocks and Yuccas (15706969863).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Red_rocks_and_Yuccas_(15706969863).jpg",
+   "credit": "Akos Kokai · CC BY 2.0",
+   "kind": "habit",
+   "score": 5.8
+  },
+  {
+   "file": "/images/yuba_2.webp",
+   "title": "File:Narrow leaf banana yucca (Yucca baccata) - Flickr - brewbooks.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Narrow_leaf_banana_yucca_(Yucca_baccata)_-_Flickr_-_brewbooks.jpg",
+   "credit": "brewbooks · CC BY-SA 2.0",
+   "kind": "close-up",
+   "score": -3.81
+  }
+ ],
+ "opba": [
+  {
+   "file": "/images/opba_0.webp",
+   "title": "File:Beavertail cactus, Opuntia basilaris basilaris flowering plant (15199876386).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Beavertail_cactus,_Opuntia_basilaris_basilaris_flowering_plant_(15199876386).jpg",
+   "credit": "Jim Morefield · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 5.36
+  },
+  {
+   "file": "/images/opba_1.webp",
+   "title": "File:Opuntia basilaris (25751657114).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Opuntia_basilaris_(25751657114).jpg",
+   "credit": "Chris Hunkeler · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 5.03
+  },
+  {
+   "file": "/images/opba_2.webp",
+   "title": "File:Beavertail Cactus (5422060721).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Beavertail_Cactus_(5422060721).jpg",
+   "credit": "Rennett Stowe · CC BY 2.0",
+   "kind": "habit",
+   "score": 1.84
+  }
+ ],
+ "oper": [
+  {
+   "file": "/images/oper_0.webp",
+   "title": "File:Opuntia polyacantha var. erinacea 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Opuntia_polyacantha_var._erinacea_1.jpg",
+   "credit": "Wikimedia Commons · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.5
+  },
+  {
+   "file": "/images/oper_1.webp",
+   "title": "File:Opuntia polyacantha var. erinacea 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Opuntia_polyacantha_var._erinacea_2.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 3.41
+  }
+ ],
+ "ectr": [
+  {
+   "file": "/images/ectr_0.webp",
+   "title": "File:Echinocereus triglochidiatus (claret-cup cactus) 2 (23781094070).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Echinocereus_triglochidiatus_(claret-cup_cactus)_2_(23781094070).jpg",
+   "credit": "James St. John · CC BY 2.0",
+   "kind": "habit",
+   "score": 4.5
+  },
+  {
+   "file": "/images/ectr_1.webp",
+   "title": "File:Echinocereus triglochidiatus kz01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Echinocereus_triglochidiatus_kz01.jpg",
+   "credit": "Krzysztof Ziarnek, Kenraiz · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 3.88
+  },
+  {
+   "file": "/images/ectr_2.webp",
+   "title": "File:Echinocereus triglochidiatus Kingcup cactus (7914866746).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Echinocereus_triglochidiatus_Kingcup_cactus_(7914866746).jpg",
+   "credit": "Paul Asman and Jill Lenoble · CC BY 2.0",
+   "kind": "habit",
+   "score": 2.79
+  }
+ ],
+ "cyec": [
+  {
+   "file": "/images/cyec_0.webp",
+   "title": "File:Cylindropuntia echinocarpa (6995167481).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Cylindropuntia_echinocarpa_(6995167481).jpg",
+   "credit": "Chris M Morris · CC BY 2.0",
+   "kind": "habit",
+   "score": 5.33
+  },
+  {
+   "file": "/images/cyec_1.webp",
+   "title": "File:Cylindropuntia echinocarpa 2018-04-11 Gold Butte NM 01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Cylindropuntia_echinocarpa_2018-04-11_Gold_Butte_NM_01.jpg",
+   "credit": "Agnieszka Kwiecień, Nova · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 4.54
+  },
+  {
+   "file": "/images/cyec_2.webp",
+   "title": "File:Cylindropuntia echinocarpa 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Cylindropuntia_echinocarpa_1.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.5
+  }
+ ],
+ "fecy": [
+  {
+   "file": "/images/fecy_0.webp",
+   "title": "File:Ferocactus cylindraceus, 49 Palms Trail 7423 RobbHannawacker.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ferocactus_cylindraceus,_49_Palms_Trail_7423_RobbHannawacker.jpg",
+   "credit": "Robb Hannawacker · Public domain",
+   "kind": "habit",
+   "score": 6.62
+  },
+  {
+   "file": "/images/fecy_1.webp",
+   "title": "File:California Barrel Cactus (8938525823).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:California_Barrel_Cactus_(8938525823).jpg",
+   "credit": "BLM Nevada · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 4.5
+  },
+  {
+   "file": "/images/fecy_2.webp",
+   "title": "File:California Barrel Cactus (Ferocactus cylindraceus) (3104091014) (2).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:California_Barrel_Cactus_(Ferocactus_cylindraceus)_(3104091014)_(2).jpg",
+   "credit": "Cliff · CC BY 2.0",
+   "kind": "habit",
+   "score": 1.76
+  }
+ ],
+ "agut": [
+  {
+   "file": "/images/agut_0.webp",
+   "title": "File:Agave utahensis (16143301148).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Agave_utahensis_(16143301148).jpg",
+   "credit": "Akos Kokai · CC BY 2.0",
+   "kind": "habit",
+   "score": 4.5
+  },
+  {
+   "file": "/images/agut_1.webp",
+   "title": "File:Agave utahensis 29.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Agave_utahensis_29.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 3.72
+  },
+  {
+   "file": "/images/agut_2.webp",
+   "title": "File:Flickr - brewbooks - Agave utahensis.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_brewbooks_-_Agave_utahensis.jpg",
+   "credit": "brewbooks · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 0.91
+  }
+ ],
+ "ecgr": [
+  {
+   "file": "/images/ecgr_0.webp",
+   "title": "File:Caryophyllales - Kroenleinia grusonii 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Caryophyllales_-_Kroenleinia_grusonii_1.jpg",
+   "credit": "Emőke Dénes · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 4.17
+  },
+  {
+   "file": "/images/ecgr_1.webp",
+   "title": "File:Caryophyllales - Kroenleinia grusonii 10.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Caryophyllales_-_Kroenleinia_grusonii_10.jpg",
+   "credit": "Emőke Dénes · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 1.85
+  },
+  {
+   "file": "/images/ecgr_2.webp",
+   "title": "File:Mexican Barrel Cactus (7499869554).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mexican_Barrel_Cactus_(7499869554).jpg",
+   "credit": "Rod Waddington · CC BY-SA 2.0",
+   "kind": "unclear",
+   "score": -0.43
+  }
+ ],
+ "hepa": [
+  {
+   "file": "/images/hepa_0.webp",
+   "title": "File:Hesperaloe parviflora - Zilker Botanical Garden - Austin, Texas - DSC08733.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hesperaloe_parviflora_-_Zilker_Botanical_Garden_-_Austin,_Texas_-_DSC08733.jpg",
+   "credit": "Daderot · CC0",
+   "kind": "habit",
+   "score": 2.94
+  },
+  {
+   "file": "/images/hepa_1.webp",
+   "title": "File:Hesperaloe parviflora 1zz.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hesperaloe_parviflora_1zz.jpg",
+   "credit": "David J. Stang · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 1.36
+  },
+  {
+   "file": "/images/hepa_2.webp",
+   "title": "File:Hesperaloe parviflora 0zz.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Hesperaloe_parviflora_0zz.jpg",
+   "credit": "David J. Stang · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": -95.62
+  }
+ ],
+ "latr": [
+  {
+   "file": "/images/latr_0.webp",
+   "title": "File:Larrea tridentata 2018-04-07 Death Valley Furnace Creek Visitor Center 01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Larrea_tridentata_2018-04-07_Death_Valley_Furnace_Creek_Visitor_Center_01.jpg",
+   "credit": "Agnieszka Kwiecień, Nova · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 7.44
+  },
+  {
+   "file": "/images/latr_1.webp",
+   "title": "File:Larrea tridentata Anza-Borrego.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Larrea_tridentata_Anza-Borrego.jpg",
+   "credit": "Adbar · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 2.36
+  },
+  {
+   "file": "/images/latr_2.webp",
+   "title": "File:Larrea tridentata Furnace Creek.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Larrea_tridentata_Furnace_Creek.jpg",
+   "credit": "Eric in SF · CC BY-SA 3.0",
+   "kind": "close-up",
+   "score": -101.46
+  }
+ ],
+ "enfa": [
+  {
+   "file": "/images/enfa_0.webp",
+   "title": "File:Encelia farinosa form.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Encelia_farinosa_form.jpg",
+   "credit": "Wikimedia Commons · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 7.5
+  },
+  {
+   "file": "/images/enfa_1.webp",
+   "title": "File:Encelia farinosa 2005-02-20.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Encelia_farinosa_2005-02-20.jpg",
+   "credit": "Curtis Clark · CC BY-SA 2.5",
+   "kind": "habit",
+   "score": 4.5
+  }
+ ],
+ "fapa": [
+  {
+   "file": "/images/fapa_0.webp",
+   "title": "File:Fallugia paradoxa form.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Fallugia_paradoxa_form.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 107.5
+  },
+  {
+   "file": "/images/fapa_1.webp",
+   "title": "File:Fallugia paradoxa 2005-10-12.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Fallugia_paradoxa_2005-10-12.jpg",
+   "credit": "Curtis Clark · CC BY-SA 2.5",
+   "kind": "close-up",
+   "score": -1.79
+  },
+  {
+   "file": "/images/fapa_2.webp",
+   "title": "File:Fallugia paradoxa 2004-08-22.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Fallugia_paradoxa_2004-08-22.jpg",
+   "credit": "Curtis Clark · CC BY-SA 2.5",
+   "kind": "close-up",
+   "score": -1.91
+  }
+ ],
+ "epne": [
+  {
+   "file": "/images/epne_0.webp",
+   "title": "File:Ephedra-nevadensis-cones.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ephedra-nevadensis-cones.jpg",
+   "credit": "Joe Decruyenaere · CC BY-SA 2.0"
+  }
+ ],
+ "epvi": [
+  {
+   "file": "/images/epvi_0.webp",
+   "title": "File:Indian tea, Ephedra viridis, male plant (16665844496).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Indian_tea,_Ephedra_viridis,_male_plant_(16665844496).jpg",
+   "credit": "Jim Morefield · CC BY-SA 2.0"
+  }
+ ],
+ "cora": [
+  {
+   "file": "/images/cora_0.webp",
+   "title": "File:Coleogyne ramosissima form.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Coleogyne_ramosissima_form.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 7.5
+  },
+  {
+   "file": "/images/cora_1.webp",
+   "title": "File:Blackbrush, Coleogyne ramosissima (31321541030).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Blackbrush,_Coleogyne_ramosissima_(31321541030).jpg",
+   "credit": "Jim Morefield · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 3.54
+  },
+  {
+   "file": "/images/cora_2.webp",
+   "title": "File:Coleogyne ramosissima flowers.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Coleogyne_ramosissima_flowers.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "close-up",
+   "score": -1.89
+  }
+ ],
+ "amdu": [
+  {
+   "file": "/images/amdu_0.webp",
+   "title": "File:Ambrosia dumosa 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ambrosia_dumosa_2.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.52
+  },
+  {
+   "file": "/images/amdu_1.webp",
+   "title": "File:Ambrosia dumosa 1c.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Ambrosia_dumosa_1c.JPG",
+   "credit": "Consultaplantas · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 4.35
+  },
+  {
+   "file": "/images/amdu_2.webp",
+   "title": "File:Ambrosia dumosa 3.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ambrosia_dumosa_3.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "unclear",
+   "score": -0.97
+  }
+ ],
+ "sado": [
+  {
+   "file": "/images/sado_0.webp",
+   "title": "File:Salvia dorrii 8117.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Salvia_dorrii_8117.JPG",
+   "credit": "Walter Siegmund · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 4.57
+  },
+  {
+   "file": "/images/sado_1.webp",
+   "title": "File:Salvia dorrii 4.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Salvia_dorrii_4.jpg",
+   "credit": "Wikimedia Commons · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.52
+  },
+  {
+   "file": "/images/sado_2.webp",
+   "title": "File:Salvia dorrii close.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Salvia_dorrii_close.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "close-up",
+   "score": -99.46
+  }
+ ],
+ "atca": [
+  {
+   "file": "/images/atca_0.webp",
+   "title": "File:Atriplex canescens var canescens 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Atriplex_canescens_var_canescens_2.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 6.0
+  },
+  {
+   "file": "/images/atca_1.webp",
+   "title": "File:Atriplex canescens (8148180299).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Atriplex_canescens_(8148180299).jpg",
+   "credit": "Matt Lavin · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 4.19
+  },
+  {
+   "file": "/images/atca_2.webp",
+   "title": "File:Atriplex canescens var canescens 4.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Atriplex_canescens_var_canescens_4.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "unclear",
+   "score": -98.86
+  }
+ ],
+ "psfr": [
+  {
+   "file": "/images/psfr_0.webp",
+   "title": "File:Psorothamnus fremontii - Indigo Bush (8953766624).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Psorothamnus_fremontii_-_Indigo_Bush_(8953766624).jpg",
+   "credit": "BLM Nevada · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 4.61
+  },
+  {
+   "file": "/images/psfr_1.webp",
+   "title": "File:Psorothamnus fremontii 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Psorothamnus_fremontii_1.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.58
+  },
+  {
+   "file": "/images/psfr_2.webp",
+   "title": "File:Psorothamnus fremontii 5.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Psorothamnus_fremontii_5.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 2.84
+  }
+ ],
+ "lefr": [
+  {
+   "file": "/images/lefr_0.webp",
+   "title": "File:Purple Sage (Leucophyllum frutescens) 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Purple_Sage_(Leucophyllum_frutescens)_2.jpg",
+   "credit": "Mokkie · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.5
+  },
+  {
+   "file": "/images/lefr_1.webp",
+   "title": "File:Leucophyllum frutescens (Purple Sage) W IMG 1125.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Leucophyllum_frutescens_(Purple_Sage)_W_IMG_1125.jpg",
+   "credit": "J.M.Garg · CC BY 3.0",
+   "kind": "unclear",
+   "score": -0.81
+  },
+  {
+   "file": "/images/lefr_2.webp",
+   "title": "File:Starr-120522-6668-Leucophyllum frutescens-flowers and leaves-Iao Tropical Gardens of Maui-Maui (25025826932).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Starr-120522-6668-Leucophyllum_frutescens-flowers_and_leaves-Iao_Tropical_Gardens_of_Maui-Maui_(25025826932).jpg",
+   "credit": "Forest and Kim Starr · CC BY 3.0 us",
+   "kind": "close-up",
+   "score": -5.25
+  }
+ ],
+ "pepa": [
+  {
+   "file": "/images/pepa_0.webp",
+   "title": "File:釣鐘柳屬 Penstemon palmeri -華沙大學植物園 Warsaw University Botanic Garden- (35532549284).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:%E9%87%A3%E9%90%98%E6%9F%B3%E5%B1%AC_Penstemon_palmeri_-%E8%8F%AF%E6%B2%99%E5%A4%A7%E5%AD%B8%E6%A4%8D%E7%89%A9%E5%9C%92_Warsaw_University_Botanic_Garden-_(35532549284).jpg",
+   "credit": "阿橋 HQ · CC BY-SA 2.0"
+  }
+ ],
+ "peea": [
+  {
+   "file": "/images/peea_0.webp",
+   "title": "File:Penstemon eatonii - firecracker penstemon - 51220511691.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Penstemon_eatonii_-_firecracker_penstemon_-_51220511691.jpg",
+   "credit": "Matt Lavin · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 4.19
+  },
+  {
+   "file": "/images/peea_1.webp",
+   "title": "File:Penstemon eatonii (firecracker beardtongue) (Deer Creek Canyon, Utah, USA) (15147322834).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Penstemon_eatonii_(firecracker_beardtongue)_(Deer_Creek_Canyon,_Utah,_USA)_(15147322834).jpg",
+   "credit": "James St. John · CC BY 2.0",
+   "kind": "unclear",
+   "score": 3.13
+  },
+  {
+   "file": "/images/peea_2.webp",
+   "title": "File:Penstemon eatonii - 5143723837.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Penstemon_eatonii_-_5143723837.jpg",
+   "credit": "Matt Lavin · CC BY-SA 2.0",
+   "kind": "unclear",
+   "score": 0.83
+  }
+ ],
+ "spam": [
+  {
+   "file": "/images/spam_0.webp",
+   "title": "File:Sphaeralcea ambigua 2018-04-11 Gold Butte National Monument 02.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Sphaeralcea_ambigua_2018-04-11_Gold_Butte_National_Monument_02.jpg",
+   "credit": "Agnieszka Kwiecień, Nova · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 7.11
+  },
+  {
+   "file": "/images/spam_1.webp",
+   "title": "File:Sphaeralcea ambigua 2018-04-11 Gold Butte National Monument 01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Sphaeralcea_ambigua_2018-04-11_Gold_Butte_National_Monument_01.jpg",
+   "credit": "Agnieszka Kwiecień, Nova · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 6.5
+  },
+  {
+   "file": "/images/spam_2.webp",
+   "title": "File:Sphaeralcea ambigua 20050411 36.26065 117.21721 1075 DVNP-WildroseCnyn 01.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Sphaeralcea_ambigua_20050411_36.26065_117.21721_1075_DVNP-WildroseCnyn_01.jpg",
+   "credit": "Lblakely · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 1.37
+  }
+ ],
+ "bamu": [
+  {
+   "file": "/images/bamu_0.webp",
+   "title": "File:Baileya-multiradiata-20080325.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Baileya-multiradiata-20080325.JPG",
+   "credit": "Miwasatoshi · CC BY-SA 4.0",
+   "kind": "close-up",
+   "score": -1.31
+  },
+  {
+   "file": "/images/bamu_1.webp",
+   "title": "File:Baileya multiradiata head 2003-07-03.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Baileya_multiradiata_head_2003-07-03.jpg",
+   "credit": "Curtis Clark · CC BY-SA 2.5",
+   "kind": "close-up",
+   "score": -104.61
+  },
+  {
+   "file": "/images/bamu_2.webp",
+   "title": "File:Baileya multiradiata flower 1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Baileya_multiradiata_flower_1.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "close-up",
+   "score": -106.41
+  }
+ ],
+ "psco": [
+  {
+   "file": "/images/psco_0.webp",
+   "title": "File:Psilostrophe cooperi 5.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Psilostrophe_cooperi_5.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.9
+  },
+  {
+   "file": "/images/psco_1.webp",
+   "title": "File:Psilostrophe cooperi 2.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Psilostrophe_cooperi_2.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.5
+  },
+  {
+   "file": "/images/psco_2.webp",
+   "title": "File:Psilostrophe cooperi 3.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Psilostrophe_cooperi_3.jpg",
+   "credit": "Stan Shebs · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 3.26
+  }
+ ],
+ "mimu": [
+  {
+   "file": "/images/mimu_0.webp",
+   "title": "File:Mirabilis multiflora - Flickr - aspidoscelis (1).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Mirabilis_multiflora_-_Flickr_-_aspidoscelis_(1).jpg",
+   "credit": "Patrick Alexander · CC0"
+  }
+ ],
+ "kean": [
+  {
+   "file": "/images/kean_0.webp",
+   "title": "File:Keckiellaantirrhinoides.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Keckiellaantirrhinoides.jpg",
+   "credit": "Stickpen · Public domain"
+  }
+ ],
+ "juca": [
+  {
+   "file": "/images/juca_0.webp",
+   "title": "File:Justicia californica on the rocks.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Justicia_californica_on_the_rocks.jpg",
+   "credit": "Ciar · Public domain"
+  }
+ ],
+ "achy": [
+  {
+   "file": "/images/achy_0.webp",
+   "title": "File:Achnatherum hymenoides-5-19-05.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Achnatherum_hymenoides-5-19-05.jpg",
+   "credit": "Thayne Tuason · CC BY-SA 4.0",
+   "kind": "habit",
+   "score": 104.34
+  },
+  {
+   "file": "/images/achy_1.webp",
+   "title": "File:Oryzopsis hymenoides (Indian ricegrass) 1 (24096328555).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Oryzopsis_hymenoides_(Indian_ricegrass)_1_(24096328555).jpg",
+   "credit": "James St. John · CC BY 2.0",
+   "kind": "habit",
+   "score": 2.94
+  },
+  {
+   "file": "/images/achy_2.webp",
+   "title": "File:Achnatherum hymenoides - Ricegrass.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Achnatherum_hymenoides_-_Ricegrass.jpg",
+   "credit": "NRCS · Public domain",
+   "kind": "habit",
+   "score": 0.91
+  }
+ ],
+ "plri": [
+  {
+   "file": "/images/plri_0.webp",
+   "title": "File:Joshua Tree National Park - Big Galleta Grass (Pleuraphis rigida).JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Joshua_Tree_National_Park_-_Big_Galleta_Grass_(Pleuraphis_rigida).JPG",
+   "credit": "Daniel Mayer (mav) · CC BY-SA 3.0"
+  }
+ ],
+ "acsp": [
+  {
+   "file": "/images/acsp_0.webp",
+   "title": "File:Stipa speciosa (Achnatherum speciosum) (20221718348).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Stipa_speciosa_(Achnatherum_speciosum)_(20221718348).jpg",
+   "credit": "Matt Lavin · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 4.53
+  },
+  {
+   "file": "/images/acsp_1.webp",
+   "title": "File:Achnatherum speciosum.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Achnatherum_speciosum.jpg",
+   "credit": "Stickpen · CC0",
+   "kind": "habit",
+   "score": 4.34
+  },
+  {
+   "file": "/images/acsp_2.webp",
+   "title": "File:Stipa speciosa - desert stipa.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Stipa_speciosa_-_desert_stipa.jpg",
+   "credit": "Matt Lavin · CC BY-SA 2.0",
+   "kind": "close-up",
+   "score": 0.44
+  }
+ ],
+ "mupo": [
+  {
+   "file": "/images/mupo_0.webp",
+   "title": "File:Muhlenbergia porteri - Flickr - aspidoscelis (3).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Muhlenbergia_porteri_-_Flickr_-_aspidoscelis_(3).jpg",
+   "credit": "Patrick Alexander · CC0",
+   "kind": "habit",
+   "score": 4.64
+  },
+  {
+   "file": "/images/mupo_1.webp",
+   "title": "File:Bush muhly, Muhlenbergia porteri (15522621647).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Bush_muhly,_Muhlenbergia_porteri_(15522621647).jpg",
+   "credit": "Jim Morefield · CC BY-SA 2.0",
+   "kind": "habit",
+   "score": 1.69
+  },
+  {
+   "file": "/images/mupo_2.webp",
+   "title": "File:Muhlenbergia porteri - Flickr - aspidoscelis.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Muhlenbergia_porteri_-_Flickr_-_aspidoscelis.jpg",
+   "credit": "Patrick Alexander · CC0",
+   "kind": "close-up",
+   "score": -4.88
+  }
+ ],
+ "bogr": [
+  {
+   "file": "/images/bogr_0.webp",
+   "title": "File:Blue grama Bouteloua gracilis MN 2007.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Blue_grama_Bouteloua_gracilis_MN_2007.JPG",
+   "credit": "SEWilco · CC BY-SA 3.0",
+   "kind": "habit",
+   "score": 4.5
+  },
+  {
+   "file": "/images/bogr_1.webp",
+   "title": "File:2016-08-27-14.12.48 ZS PMax Bouteloua gracilis-1 (29196215791).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:2016-08-27-14.12.48_ZS_PMax_Bouteloua_gracilis-1_(29196215791).jpg",
+   "credit": "John Rusk · CC BY 2.0",
+   "kind": "close-up",
+   "score": -2.53
+  }
+ ]
+}

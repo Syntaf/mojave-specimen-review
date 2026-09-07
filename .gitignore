@@ -6,3 +6,6 @@
 k8s/*/secrets.yaml
 .DS_Store
 /dist/
+/tools/cache/
+/tools/candidates.json
+/tools/candidates.html
