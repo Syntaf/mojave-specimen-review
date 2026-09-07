@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#E7E4DB">
 <title>Front Yard Specimen Review — Mojave Natives</title>
 <style>
 @font-face{font-family:'Archivo';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/archivo-normal-08c6b967.woff2) format('woff2')}
@@ -33,7 +36,7 @@
   :focus-visible{outline:2px solid var(--beavertail);outline-offset:3px;border-radius:2px}
   .eyebrow{font-family:var(--tag);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-dim)}
 
-  .whoami{display:flex;align-items:center;gap:9px;margin-top:18px;font-family:var(--tag);font-size:10px;
+  .whoami{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:18px;font-family:var(--tag);font-size:10px;
     letter-spacing:.1em;text-transform:uppercase;color:#6C6678}
   .whoami img{width:19px;height:19px;border-radius:50%;display:block}
   .whoami a{color:var(--beavertail);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:1px}
@@ -69,12 +72,13 @@
     border:1px solid var(--rule);border-radius:2px;background:rgba(255,255,255,.4);white-space:nowrap;transition:background .15s,border-color .15s}
   .chip:hover{border-color:var(--ink)}
   .chip[aria-pressed="true"]{background:var(--ink);color:var(--bone);border-color:var(--ink)}
+  .chip .short{display:none}
   .seg{display:flex;border:1px solid var(--rule);border-radius:2px;overflow:hidden}
   .seg .chip{border:none;border-left:1px solid var(--rule);border-radius:0}
   .seg .chip:first-child{border-left:none}
 
-  .body-grid{display:grid;grid-template-columns:168px 1fr;gap:38px;align-items:start;margin-top:30px}
-  nav.strata{position:sticky;top:74px}
+  .body-grid{display:grid;grid-template-columns:168px minmax(0,1fr);gap:38px;align-items:start;margin-top:30px}
+  nav.strata{position:sticky;top:74px;min-width:0}
   nav.strata .eyebrow{display:block;margin-bottom:12px}
   .stratum{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:baseline;width:100%;text-align:left;
     padding:9px 0;border-top:1px solid var(--rule);transition:color .15s}
@@ -92,9 +96,9 @@
   .sheet.is-pass{opacity:.42}
   .sheet.is-pass:hover,.sheet.is-pass:focus-within{opacity:1}
 
-  .plate{background:var(--plate);position:relative;min-height:236px;display:flex;flex-direction:column}
+  .plate{background:var(--plate);position:relative;min-height:236px;display:flex;flex-direction:column;min-width:0}
   .plate svg.draw{width:100%;height:auto;display:block;flex:1}
-  .frame{position:relative;flex:1;overflow:hidden;background:var(--plate)}
+  .frame{position:relative;flex:1;overflow:hidden;background:var(--plate);touch-action:pan-y}
   .frame img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3;opacity:0;transition:opacity .45s ease}
   .frame img.ready{opacity:1}
   .plate .nav{position:absolute;inset:auto 0 0;display:flex;justify-content:space-between;padding:8px;pointer-events:none}
@@ -170,15 +174,52 @@
   footer.foot{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:#6C6678;max-width:72ch}
   footer.foot p{margin:0 0 7px}
 
+  /* ── Tablet: strata become a horizontal strip, sheets stay two-column ── */
   @media (max-width:860px){
-    .body-grid{grid-template-columns:1fr;gap:20px}
+    .body-grid{grid-template-columns:minmax(0,1fr);gap:20px}
     nav.strata{position:static}
-    nav.strata .list{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+    nav.strata .list{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    nav.strata .list::-webkit-scrollbar{display:none}
     .stratum{border-top:none;border:1px solid var(--rule);border-radius:2px;padding:7px 11px;grid-template-columns:1fr;width:auto;flex:0 0 auto}
     .stratum .bar{display:none}
     .stratum .ct{display:inline;margin-left:6px}
-    .sheet{grid-template-columns:1fr}
-    .frame img{aspect-ratio:16/10}
+    .sheet{grid-template-columns:minmax(0,240px) minmax(0,1fr)}
+  }
+  /* ── Phone: one column, photo capped to a sane height, bigger touch targets ── */
+  @media (max-width:640px){
+    :root{--gut:14px}
+    .wrap{padding-bottom:64px}
+    header.mast{padding:28px 0 18px}
+    .mast .sub{font-size:14px}
+    .notice{flex-wrap:wrap;gap:8px 14px}
+    .notice button{margin-left:0}
+    .toolbar{padding:10px 0;gap:8px}
+    .search{flex:1 1 100%;font-size:16px;padding:9px 12px}
+    .chip{padding:8px 10px;letter-spacing:.08em}
+    .chip .long{display:none}
+    .chip .short{display:inline}
+    .sheet{grid-template-columns:minmax(0,1fr)}
+    .plate{min-height:0}
+    .frame{flex:none}
+    .frame img{height:auto;aspect-ratio:16/10;max-height:56vh}
+    .plate .nav{padding:6px}
+    .plate .nav button{width:38px;height:38px;font-size:18px}
+    .info{padding:16px 16px 16px}
+    .info h2{font-size:23px}
+    .facts{grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:10px 14px}
+    .stamp{padding:9px 13px;font-size:10.5px}
+    .notebtn{padding:6px 0}
+    .note{font-size:16px}
+    .row{grid-template-columns:8px minmax(0,1fr);gap:8px 12px;align-items:start}
+    .row .strat{grid-column:2;margin-top:-2px}
+    .list-head h2{font-size:24px}
+    .blank{padding:26px 16px}
+    footer.foot{margin-top:32px}
+  }
+  @media (pointer:coarse){
+    .plate .nav button{width:38px;height:38px;font-size:18px}
+    .stamp{padding:9px 13px}
+    .sheet.is-pass{opacity:.55}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -200,7 +241,7 @@
     <div class="whoami" id="whoami"></div>
     <div class="notice" id="notice">
       <p><strong>This shortlist is shared.</strong> Stamps and notes are saved on the server, so whoever is
-        signed in sees the same list from any device. Use the arrows on a plate (or ← →) to page through its
+        signed in sees the same list from any device. Use the arrows on a plate (or ← →, or swipe on a phone) to page through its
         photographs, and “More photos ↗” to search the web for a species whose pictures don’t do it justice.</p>
       <button id="dismiss" aria-label="Dismiss this notice">Dismiss</button>
     </div>
@@ -208,11 +249,11 @@
 
   <div class="toolbar">
     <input class="search" id="q" type="search" placeholder="Search name or trait — “hummingbird”, “yucca”, “shade”…" aria-label="Search plants">
-    <button class="chip" id="f-native" aria-pressed="false">True NV natives</button>
-    <button class="chip" id="f-rated" aria-pressed="false">Unrated only</button>
+    <button class="chip" id="f-native" aria-pressed="false"><span class="long">True NV natives</span><span class="short">NV natives</span></button>
+    <button class="chip" id="f-rated" aria-pressed="false"><span class="long">Unrated only</span><span class="short">Unrated</span></button>
     <div class="seg" role="group" aria-label="View">
       <button class="chip" id="v-browse" aria-pressed="true">Browse</button>
-      <button class="chip" id="v-list" aria-pressed="false">Shortlist</button>
+      <button class="chip" id="v-list" aria-pressed="false"><span class="long">Shortlist</span><span class="short">List</span></button>
     </div>
   </div>
 
@@ -619,6 +660,20 @@ vb.onclick=()=>view("browse");vl.onclick=()=>view("list");
 document.getElementById("dismiss").onclick=()=>{
   S.noticeOff=true;try{localStorage.setItem("mojave-yard:notice","off")}catch(e){}
   document.getElementById("notice").hidden=true};
+
+/* Swipe left/right on a plate to page its photographs on touch screens. */
+let swipe=null;
+document.addEventListener("touchstart",e=>{
+  const fr=e.target.closest(".frame");if(!fr||e.touches.length!==1)return;
+  const t=e.touches[0];swipe={id:fr.closest("[data-plate]").dataset.plate,x:t.clientX,y:t.clientY};
+},{passive:true});
+document.addEventListener("touchend",e=>{
+  if(!swipe)return;const s=swipe;swipe=null;
+  const t=e.changedTouches[0],dx=t.clientX-s.x,dy=t.clientY-s.y;
+  if(Math.abs(dx)<40||Math.abs(dx)<Math.abs(dy)*1.5)return;
+  const g=gal[s.id];if(!g)return;const L=liveImgs(g).length;if(L<2)return;
+  g.i=(g.i+(dx<0?1:-1)+L)%L;paint(s.id);
+},{passive:true});
 
 document.addEventListener("keydown",e=>{
   if(e.key!=="ArrowLeft"&&e.key!=="ArrowRight")return;
